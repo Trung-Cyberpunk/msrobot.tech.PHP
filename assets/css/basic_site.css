@@ -1,0 +1,223 @@
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+  
+
+:root{
+    --bg-color: #fff;
+    --item-color:#0744F2;
+    --special-color: #FF6400;
+    --black--color: black;
+}
+
+.basic_site{
+    width: 100%;
+    height: auto;
+    padding:4rem 7%;
+}
+
+.btn_city{
+    display: block;
+    width: 100%;
+
+}
+
+button.btn-ct{
+    width: 25%;
+    border: none;
+    margin: -2px;
+    height: 5rem;
+    font-size: 1.4rem;
+    border: 1px solid #D8D8D8;
+    opacity: 0.7;
+}
+
+button.btn-ct:hover{
+    cursor: pointer;
+}
+.content_city{
+    padding: 5rem;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    opacity: 0.9;
+    margin-bottom: 7rem;
+}
+
+.content_box{
+    display: none;
+}
+.content_box p{
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+}
+
+.click{
+    background-color: var(--bg-color);
+    opacity: unset;
+}
+.content_block{
+    display: block;
+}
+
+.city_img{
+    display: flex;
+    width: 100%;
+    text-align: justify;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+
+.city_img-box{
+    max-width: 24%;
+}
+.city_img-box h4{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.city_img-box img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.city_img-box p{
+    font-size: 1.75rem;
+}
+
+.form_rg{
+    width: 100%;
+}
+.form_rg h4{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.form_rg label{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.nameform{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.nameform input{
+    width: 20rem;
+    margin-right: 1rem;
+    height: 1.7rem;
+    padding: 10px;
+}
+
+.nameform label{
+    margin-right: 15rem;
+}
+
+.marital{
+    display: flex;
+    text-align: center;
+    margin-bottom: 5rem;    
+}
+.marital label{
+    margin-right: 15rem;
+}
+
+.marital .male{
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.marital .female{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.marital .orther{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.hoddy{
+    margin-bottom: 5rem;
+}
+.hoddy label:nth-child(1){
+    margin-right: 20rem;
+}
+
+.hoddy label{
+    display: inline;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+.country{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 5rem;
+}
+.country #country-select{
+    width: 100%;
+    height: 1.5rem;
+    opacity: 0.8;
+    margin-top: 0.7rem;
+}
+
+.your_email,.your_phone{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 4rem;
+}
+.your_email input{
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+}
+.your_phone input{
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.choose_file{
+    margin-bottom: 5rem;
+}
+.choose_file form{
+    display: flex;
+    flex-direction: column;
+}
+.choose_file form label{
+    margin-bottom: 0.5rem;
+}
+
+.box-scroll{
+    margin-bottom: 5rem;
+}
+
+
+.scroll{
+    width: 250px;
+    height: 100px;
+    border: 1px;
+    overflow: auto;
+    border: 0.5px solid #666666;    
+    padding: 10px;
+    margin-top: 0.5rem;
+}
+.yourself{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+.yourself textarea{
+    height: 300px;
+    margin-top: 0.7rem;
+}
+
+.form_rg .btn_{
+    margin-top: 4rem;
+    width: 70px;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid #666666;
+    background: #FFFFFF;
+    cursor: pointer;
+    padding: 2px;
+}

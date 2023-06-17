@@ -1,0 +1,188 @@
+
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+ 
+body{
+    position: relative;
+}
+:root{
+    --bg-color: #fff;
+    --item-color:#0744F2;
+    --special-color: #FF6400;
+    --black--color: black;
+}
+
+.fb_icon{
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.run{
+    transform: scale(1);
+}
+
+.fb_icon{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15rem;
+}
+
+.container_feedback{
+    width: 40rem;
+    height: auto;
+    background-color: var(--bg-color);
+    box-shadow: 0px 31px 41px rgba(33, 43, 54, 0.2), 0px 2px 16px rgba(33, 43, 54, 0.08);
+    border-radius: 6px;
+}
+
+.title_feedback{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    box-shadow: inset 0px -1px 0px #DFE3E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_feedback #btn_fb{
+    display: block;
+    font-size: 3rem;
+    opacity: 0.6;
+}
+
+#btn_fb:hover{
+    cursor: pointer;
+}
+.main_feedback{
+    padding: 1.7rem;
+}
+
+.main_feedback .feel_feedback{
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.main_feedback .feel_feedback #img_icon{
+    padding-top: 0.5rem;
+
+}
+#img_icon_1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container_icon{
+    margin-left: 1rem;
+    padding: 0.8rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.title_icon{
+    visibility: hidden;
+    margin-top: 0.5rem;
+} 
+
+.selected .title_icon{
+    visibility: visible;
+}
+
+.selected .feedback-img{
+    z-index: 0;
+}
+.feedback-img{
+    z-index: 2;
+    cursor: pointer;
+    background-color: var(--bg-color);
+}
+
+.feedback-img_2{
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.feel_feedback #img_icon_2 > img{
+    padding-right: 1.7rem;
+    filter: grayscale(0.9);
+}
+.number_fb{
+    padding-bottom: 2rem ;
+}
+
+#fb_title{
+    padding: 1rem 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.radio-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-label{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.radio-label .radio-text{
+    padding-bottom: 0.5rem;
+    color: var(--item-color);
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+.radio_title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+}
+.comment > span{
+    font-weight: 500;
+    font-size: 1.3REM;
+    line-height: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.comment > input{
+    border: none;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    opacity: 0.7;
+    background: #FFFFFF;
+    border: 1px solid #C4CDD5;
+    box-shadow: inset 0px 1px 2px rgba(102, 113, 123, 0.21);
+    border-radius: 3px;
+    margin-bottom: 1.7rem;
+
+}
+
+.comment > #btn_feedback{
+    width: 100%;
+    background-color: var(--item-color);
+    color: var(--bg-color);
+    height: 4rem;
+    border: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.comment > #btn_feedback:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}

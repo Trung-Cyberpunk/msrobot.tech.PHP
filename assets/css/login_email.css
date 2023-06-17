@@ -1,0 +1,77 @@
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+ 
+
+:root{
+    --bg-color: #fff;
+    --item-color:#0744F2;
+    --special-color: #FF6400;
+    --black--color: black;
+}
+body{
+    height: 500px;
+}
+
+
+
+.email_lg{
+    padding: 5rem 7% 13rem 7%;
+    border: 1px solid #DFDFDF;
+}
+
+.sign_title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 7rem;
+    font-weight: 700;
+    font-size: 1.3rem;    
+    line-height: 3.2rem;
+    align-items: center;
+    background-color: var(--item-color);
+}
+.sign_title > h1{
+    color: var(--bg-color);
+}
+
+.email_lg .title_lg{
+    width: 100%;
+    height: 4rem;
+}
+
+.container_lg{
+    background-color: #F8FAFC;
+}
+
+.title_lg{
+    padding: 2rem;
+    border: 1px solid #DFDFDF;  
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.bottom_lg{
+    padding: 2rem 2rem;
+    border: 1px solid #DFDFDF;  
+    font-size: 1.1  rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.bottom_lg > p{
+    margin-bottom: 1rem;
+}
+.bottom_lg .btn_email{
+    width: 6rem;
+    border: 1px solid var(--item-color);
+    padding: 1.2rem 2.2rem;
+    cursor: pointer;
+    background-color: var(--item-color);
+    font-size: 1.2rem;
+    border-radius: 2px;
+    color: var(--bg-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.bottom_lg .btn_email:hover{
+    background-color: rgba(7,68,242,0.7);
+}
