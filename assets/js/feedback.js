@@ -1,3 +1,4 @@
+// xử lý sự kiện các box feedback 
 
 const feedback_img = document.querySelector("#feedback-icon");
 // const backgr = document.querySelector(".backgr");

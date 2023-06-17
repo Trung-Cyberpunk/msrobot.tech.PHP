@@ -2,7 +2,7 @@
 const item_btn = document.querySelectorAll(".btn-ct");
 const item_content = document.querySelectorAll(".content_box")
 
-
+//box city
 item_btn.forEach(function(button, index) {
     button.addEventListener('click', function(){
         item_btn.forEach(function(btn){

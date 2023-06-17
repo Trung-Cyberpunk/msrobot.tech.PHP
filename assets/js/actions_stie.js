@@ -1,6 +1,4 @@
 
-
-
 const btn_y = document.querySelectorAll(".btn-y");
 const container_action = document.querySelectorAll(".container_action");
      
@@ -14,13 +12,11 @@ btn_y.forEach(function(button,index){
         container_action.forEach(function(box){
             box.removeAttribute('id')
         })
+        
         container_action[index].setAttribute('id','container_block');
     })
 })  
-  
 
-
-// trung
 
 // Lấy tất cả các nút x_action
 const closeButtons = document.querySelectorAll("#x_action");

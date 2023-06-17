@@ -1,4 +1,6 @@
 
+
+//droop qs for forum
 const ask = document.querySelectorAll(".draft_qs");
 
 const up_dr = document.querySelectorAll(".up_dr");
@@ -6,7 +8,7 @@ const down_dr = document.querySelectorAll(".down_dr");
 const list_li = document.querySelectorAll(".a");
 const title_dr = document.querySelectorAll("#title_dr");
 
-
+// down
 for( let i = 0; i < ask.length; i++){
     down_dr[i].addEventListener('click', ()=>{
         list_li[i].style.display = 'block';
@@ -15,7 +17,7 @@ for( let i = 0; i < ask.length; i++){
         title_dr[i].classList.add('dr_color');
     });
 }
-
+//up
 for( let i = 0; i < ask.length; i++){
     up_dr[i].addEventListener('click', ()=> {
         list_li[i].style.display = 'none';

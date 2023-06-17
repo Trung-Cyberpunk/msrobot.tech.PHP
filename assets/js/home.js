@@ -21,7 +21,7 @@
 //     }
 // });
 
-
+//thay đổi width của thẻ h1 khi demosites chạy
 $(document).ready(function() {
   var initialWidth = $("#title-main").css("width");
 

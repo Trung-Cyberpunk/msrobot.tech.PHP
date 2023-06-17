@@ -1,77 +1,3 @@
-// cách 1 sử dụng js thuần
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     var fliter_price = document.getElementById('fliter_price');
-//     var handle1 = document.getElementById('handle1');
-//     var handle2 = document.getElementById('handle2');
-//     var value1 = document.getElementById('value1');
-//     var value2 = document.getElementById('value2');
-//     var rangeMin =  0;
-//     var rangeMax = 1900;
-//     var handleWidth = 20;
-//     handle1.style.left = '0px';
-//     handle2.style.right = (fliter_price.offsetHeight - handleWidth) + 'px';
-
-//     handle1.addEventListener('mousedown', function(envet){
-//         var sliderRect = fliter_price.getBoundingClientRect();
-//         var handle1Rect = handle1.getBoundingClientRect();
-//         var handle2Rect = handle2.getBoundingClientRect();
-//         var offsetX = envet.clientX - handle1Rect.left;
-
-//         document.addEventListener('mousemove', dragHandle1);
-//         document.addEventListener('mouseup', function(){
-//             document.removeEventListener('mousemove', dragHandle1);
-//         });
-//         function dragHandle1(event){
-//             var left = event.clientX - sliderRect.left - offsetX;
-//             var right = parsetInt(handle2.style.left, 10) - handleWidth;
-
-//             if(left < rangeMin){
-//                 left = rangeMin;
-//             }
-//             else if ( left > right){
-//                 left = right;
-//             }
-
-//             handle1.style.left = left + 'px';
-//             value1.textContent = calculateValue(left);
-//         }
-//     });
-
-//     handle2.addEventListener('mousedown', function(event){
-//         var fliter_price = fliter_price.getBoundingClientRect();
-//         var handle1Rect = handle1.getBoundingClientRect();
-//         var handle2Rect = handle2.getBoundingClientRect();
-//         var offsetX = event.clientX - handle2Rect.left;
-
-//         document.addEventListener('mousemove', dragHandle2);
-//         document.addEventListener('mouseup', function() {
-//           document.removeEventListener('mousemove', dragHandle2);
-//         });
-
-//         function dragHandle2(event){
-//             var left = parseInt(handle1.style.left, 10) + handleWidth;
-//             var right = event.clientX - sliderRect.left - offsetX;
-
-//             if (right > rangeMax - handleWidth) {
-//                 right = rangeMax - handleWidth;
-//             } else if (right < left) {
-//                 right = left;
-//             }
-
-//           handle2.style.left = right + 'px';
-//           value2.textContent = calculateValue(right);
-//         }
-
-//     });
-
-//     function calculateValue(position) {
-//         var valueRange = rangeMax - rangeMin;
-//         var pixelRange = slider.offsetWidth - handleWidth;
-//         var ratio = valueRange / pixelRange;
-//         return Math.round(position * ratio);
-//       }
-// });
 
 // Xử lý thanh lọc đơn giá với việc sử dụng thư viện Jquery UI
 
@@ -178,4 +104,82 @@ var slides_boxs = document.querySelectorAll('.boxs');
   }
 
 
-  setInterval(slideNext, 3000);
+  setInterval(slideNext, 3000); //time 3s các box tự di chuyển
+
+
+
+
+// cách 1 sử dụng js thuần
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     var fliter_price = document.getElementById('fliter_price');
+//     var handle1 = document.getElementById('handle1');
+//     var handle2 = document.getElementById('handle2');
+//     var value1 = document.getElementById('value1');
+//     var value2 = document.getElementById('value2');
+//     var rangeMin =  0;
+//     var rangeMax = 1900;
+//     var handleWidth = 20;
+//     handle1.style.left = '0px';
+//     handle2.style.right = (fliter_price.offsetHeight - handleWidth) + 'px';
+
+//     handle1.addEventListener('mousedown', function(envet){
+//         var sliderRect = fliter_price.getBoundingClientRect();
+//         var handle1Rect = handle1.getBoundingClientRect();
+//         var handle2Rect = handle2.getBoundingClientRect();
+//         var offsetX = envet.clientX - handle1Rect.left;
+
+//         document.addEventListener('mousemove', dragHandle1);
+//         document.addEventListener('mouseup', function(){
+//             document.removeEventListener('mousemove', dragHandle1);
+//         });
+//         function dragHandle1(event){
+//             var left = event.clientX - sliderRect.left - offsetX;
+//             var right = parsetInt(handle2.style.left, 10) - handleWidth;
+
+//             if(left < rangeMin){
+//                 left = rangeMin;
+//             }
+//             else if ( left > right){
+//                 left = right;
+//             }
+
+//             handle1.style.left = left + 'px';
+//             value1.textContent = calculateValue(left);
+//         }
+//     });
+
+//     handle2.addEventListener('mousedown', function(event){
+//         var fliter_price = fliter_price.getBoundingClientRect();
+//         var handle1Rect = handle1.getBoundingClientRect();
+//         var handle2Rect = handle2.getBoundingClientRect();
+//         var offsetX = event.clientX - handle2Rect.left;
+
+//         document.addEventListener('mousemove', dragHandle2);
+//         document.addEventListener('mouseup', function() {
+//           document.removeEventListener('mousemove', dragHandle2);
+//         });
+
+//         function dragHandle2(event){
+//             var left = parseInt(handle1.style.left, 10) + handleWidth;
+//             var right = event.clientX - sliderRect.left - offsetX;
+
+//             if (right > rangeMax - handleWidth) {
+//                 right = rangeMax - handleWidth;
+//             } else if (right < left) {
+//                 right = left;
+//             }
+
+//           handle2.style.left = right + 'px';
+//           value2.textContent = calculateValue(right);
+//         }
+
+//     });
+
+//     function calculateValue(position) {
+//         var valueRange = rangeMax - rangeMin;
+//         var pixelRange = slider.offsetWidth - handleWidth;
+//         var ratio = valueRange / pixelRange;
+//         return Math.round(position * ratio);
+//       }
+// });
