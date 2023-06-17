@@ -15,6 +15,7 @@ btn_signUp.onclick = () => {
     wapper_login.classList.remove("active");
     backgr.classList.add("opacity");
 }
+
 sign_close.onclick = () => {
     wapper_sign.classList.remove("active");
     backgr.classList.remove("opacity");
@@ -40,6 +41,14 @@ sign_a.onclick = () =>{
 
 
 
+// note đăng nhập trong từng page
+
+
+ask_login.onclick = () =>{
+    wapper_sign.classList.add("active");
+    wapper_login.classList.remove("active");
+    backgr.classList.add("opacity");
+}
 
 
 
