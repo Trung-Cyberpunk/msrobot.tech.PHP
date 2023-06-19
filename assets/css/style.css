@@ -387,7 +387,6 @@ body{
 
 
 /* Container */
-
 .container{
     display: flex;
     flex-direction: column;
@@ -413,7 +412,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
     justify-content: center ;
-    padding-top: 0.8rem;
+    padding-top: 0.8rem; 
 }
 
 #img-container{
@@ -574,9 +573,9 @@ body{
 
 .main-item_box #img_box{
     position: absolute;
-    bottom: 18.5rem;
-    right: 0;
-    width: 43.5rem;
+    bottom: 12.5rem;
+    right: 0;   
+    width: 45.5rem;
 }
 
 .item_box{
@@ -605,10 +604,8 @@ body{
     opacity: 0.6;
 }
 
-.item_box > ul > .item_title{
-    margin-bottom: 1.2rem;
-}
-.item_box .item_title::before{
+
+.item_box .item_title strong::before{
     content: "\2713";
     font-size: 1rem;
     margin-right: 0.5rem;
@@ -618,7 +615,7 @@ body{
 #download{
     display: block;
    color: rgba(255, 100, 0, 1);
-   padding: 1rem 1.7rem;
+   padding: 0rem 0 1rem 1.7rem;
 }
 
 
