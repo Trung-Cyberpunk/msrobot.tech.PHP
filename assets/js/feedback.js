@@ -6,14 +6,19 @@ const feedback_icon = document.querySelector(".fb_icon")
 
 const remove_fb = document.querySelector("#btn_fb");
 
-feedback_img.onclick = () => {
-    feedback_icon.classList.add("run");    
-    backgr.classList.add("opacity");
+
+if (feedback_icon) {
+    feedback_img.onclick = () => {
+        feedback_icon.classList.add("run");    
+        backgr.classList.add("opacity");
+    }
 }
 
-remove_fb.onclick = () => {
-    feedback_icon.classList.remove("run");    
-    backgr.classList.remove("opacity");
+if(remove_fb){
+    remove_fb.onclick = () => {
+        feedback_icon.classList.remove("run");    
+        backgr.classList.remove("opacity");
+    }
 }
 
 

@@ -102,13 +102,11 @@ body{
     font-size: 1.4rem;
     color: var(--bg-color);
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #btn_login:hover{
     cursor: pointer;
-    background-color: var(--bg-color);
-    border: solid var(--item-color) 3px;
-    color: var(--item-color);
+    opacity: 0.7;
 }
 .login_end{
     display: block;

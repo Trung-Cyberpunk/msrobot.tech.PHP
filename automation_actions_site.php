@@ -1,59 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php $pageTitle = 'Automation';?>
+<!DOCTYPE php>
+<php lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/reset.css"> -->
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/responsive.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/style.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/login.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/sign.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/feedback-icon.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/reset_pw.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/tutorials.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/forum.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/forum_ask.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/forum_ask_login.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/automation_site.css">
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-     -->
-    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-
-    <title>Home</title>
+    <?php include 'header.php'; ?>
 </head>
 <body>
+
+
     <div class="backgr">
         
         <!-- HEADER -->
         <header class="header">
             
-            <a href="/msrobot.tech.PHP/home.html">
+            <a href="/msrobot.tech.PHP/home.php">
                 <img id="logo-item" src="assets/img/Logo.png" alt="Ảnh Logo" class="logo">
             </a> 
             <nav id="nav">
                 <ul class="item-header">
-                    <li id="home"><a href="home.html">Home</a></li>
-                    <li id="tutorial"><a href="tutorials.html">Tutorial</a></li>
-                    <li id="forum"><a href="forum.html">Forum</a></li>
-                    <li id="blog"><a href="blogs.html">Blog</a></li>
+                    <li id="home"><a href="home.php">Home</a></li>
+                    <li id="tutorial"><a href="tutorials.php">Tutorial</a></li>
+                    <li id="forum"><a href="forum.php">Forum</a></li>
+                    <li id="blog"><a href="blogs.php">Blog</a></li>
                     <li id="demo_sites" >
                         <a id="header_down" href="#"style="width: 6rem" class="active">Demo Sites</a>
                         <ul class="header_insite">
-                            <li id="item-header_insite"><a href="basic_site_login.html">Basic Site</a></li>
-                            <li id="item-header_insite"><a href="automation_practice_site_login.html">Automation Practice Site</a></li>
-                            <li id="item-header_insite"><a href="automation_actions_site_login.html">Automation Actions Site</a></li>
-                            <li id="item-header_insite"><a href="ecommerce_site_login.html">Ecommerce Site</a></li>
+                            <li id="item-header_insite"><a href="basic_site_login.php">Basic Site</a></li>
+                            <li id="item-header_insite"><a href="automation_practice_site_login.php">Automation Practice Site</a></li>
+                            <li id="item-header_insite"><a href="automation_actions_site_login.php">Automation Actions Site</a></li>
+                            <li id="item-header_insite"><a href="ecommerce_site_login.php">Ecommerce Site</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -304,142 +278,8 @@
     </div>
 
 
-    <!-- LOGIN -->
-    <div class="wapper">
-        <div class="signUp ">
-            <div class="top-signUp">
-                <h3>Sign Up and Start Learning!</h3>
-                <a id ="btn_x" class='bx bx-x'></a>
-            </div>
-            <form class="item-signUp" action="/msrobot.tech.PHP/login_email.html">
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Email" required>
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Passwork"required>
-                    <i id="icon" class='bx bx-lock' ></i>
-                </div>
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Verify password"required>
-                    <i id="icon" class='bx bx-lock' ></i>
-                </div>
-                <span id="note">Please use this email & password to login our Demo Sites when using Selenium Test Automation.</span>
-                <div id="check">
-                    <input id="myCheckbox" type="checkbox" required>
-                    <label for="myCheckbox">Yes! I want to receive emails with Selenium Tips and ebook!</label>
-                </div>
-                    <button id="btn_sign">Sign Up</button>
-                <div class="sign_end">
-                    <p>By signing up, you agree to our <strong style="color: rgba(7, 68, 242, 1)">Terms of Use</strong> and <strong style="color: rgba(7, 68, 242, 1)">Privacy Policy.</strong>   </p>
-                    <hr style="width: 100%; height: 1px">
-                    <span>Already have an account? <a id="login_a" href="#" style="color: rgba(7, 68, 242, 1); font-weight: 600;">Log In</a></span>
-                </div>
-            </form>
-        </div>
 
-        <div class="login">
-            <div class="top-login">
-                <h3>Forgot password</h3>
-                <a id ="btn_y" class='bx bx-x'></a>
-            </div>
-            <form class="item-login" method="post" action="home.html">
-                <div class="box-login">
-                    <input id="box_" type="index" placeholder="Email" name="email" required>
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-login">
-                    <input id="box_" type="index" placeholder="Passwork" name="passwork" required>
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>      
-                <button id="btn_login" name="login">Login</button>
-                <div class="login_end">
-                    <p>Or <a id="passwork_rs" style="color: rgba(7, 68, 242, 1)">Forgot password</a></p>
-                    <hr style="width: 100%; height:1px">
-                    <span>Don't have an account?<a id="sign_a" href="#" style="color: rgba(7, 68, 242, 1); font-weight: 600;"> Sign up</a></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="reset_pw">
-            <div class="top-reset_pw">
-                <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong>  account!</h3>
-                <a id ="btn_z" class='bx bx-x'></a>
-            </div>
-            <form class="item-reset_pw" method="post" action="home.html">
-                <div class="box-reset_pw">
-                    <input id="box_" type="index" placeholder="Email">
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-reset_pw">
-                    <img src="/msrobot.tech.PHP/assets/img/capcha.png" alt="Capcha">
-                </div>      
-                <button id="btn_reset_pw">Reset password</button>
-                <div class="reset_pw_end">
-                    <span>Or <a id="login_rs" style="color: rgba(7, 68, 242, 1); font-weight: 600;"> Login</a></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="reset_pw_2">
-            <div class="top-reset_pw_2">
-                <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong>  account!</h3>
-                <a id ="btn_z_2" class='bx bx-x'></a>
-            </div>
-            <div class="item-reset_pw_2">
-                <div class="box-reset_pw_2">
-                    <input id="box_" type="index" placeholder="Passwork">
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>
-                <div class="box-reset_pw_2">
-                    <input id="box_" type="index" placeholder="Passwork">
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>  
-                <button id="btn_reset_pw_2">Sumbit</button>
-            </div>
-        </div>
-
-       
-    </div>
-<!-- 
-    <script>
-        $('#summernote').summernote({
-          tabsize: 2,
-          disableResizeEditor:true,
-          height: 400
-        });
-      </script> -->
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/home.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/sign_login.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/feedback.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/forum.js"></script>
-    <script src="assets/js/droop_qs.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/sign_box.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/actions_stie.js"></script>
-    <!-- thư viện Sortable kéo thả -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
-
-    <script>
-        // Sử dụng thư viện Sortable để thực hiện kéo thả
-        new Sortable(document.querySelector('.box-action'), {
-          animation: 150,
-        });
-        new Sortable(document.querySelector('.container_object'), {
-            animation: 150,
-          });
-        new Sortable(document.querySelector('.object_1'), {
-            animation: 150,
-          });
-        new Sortable(document.querySelector('.object_2'), {
-            animation: 150,
-          });
-        new Sortable(document.querySelector('.alphabet  '), {
-            animation: 150,
-          });
-      </script>
+    <?php include 'footer.php'; ?>
 </body>
 
-</html>
+</php>

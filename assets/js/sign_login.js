@@ -10,6 +10,13 @@ const sign_ask = document.querySelector("#sign_ask");
 
 const ask_login = document.querySelector("#sign_ask");
 
+// Login
+const btn_login = document.querySelector("#btn-header_login");
+const wapper_login = document.querySelector(".login");
+const login_close  = document.querySelector("#btn_y");
+
+
+// xử lý sign
 btn_signUp.onclick = () => {
     wapper_sign.classList.add("active");
     wapper_login.classList.remove("active");
@@ -26,11 +33,6 @@ login_a.onclick = () =>{
     backgr.classList.add("opacity");
 }
 
-ask_login.onclick = () =>{
-    wapper_sign.classList.add("active");
-    wapper_login.classList.remove("active");
-    backgr.classList.add("opacity");
-}
 
 sign_a.onclick = () =>{
     wapper_sign.classList.add("active");
@@ -44,11 +46,7 @@ sign_a.onclick = () =>{
 
 
 
-// Login
-const btn_login = document.querySelector("#btn-header_login");
-const wapper_login = document.querySelector(".login");
-const login_close  = document.querySelector("#btn_y");
-
+// xử lý login
 
 btn_login.onclick = () => {
     wapper_login.classList.add("active");
@@ -103,4 +101,14 @@ btn_reset.onclick = () =>{
 btn_z_2.onclick = () => {
     reset_pw_2.classList.remove("active");  
     backgr.classList.remove("opacity");
+}
+
+// sign page item
+
+if(ask_login){
+    ask_login.onclick = () =>{
+        wapper_sign.classList.add("active");
+        wapper_login.classList.remove("active");
+        backgr.classList.add("opacity");
+    }
 }

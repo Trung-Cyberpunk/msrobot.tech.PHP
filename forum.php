@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/reset.css"> -->
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/responsive.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/style.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/login.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/sign.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/feedback-icon.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/reset_pw.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/tutorials.css">
-    <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/forum.css">
+<?php $pageTitle = 'Forum'; ?>
+<!DOCTYPE php>
+<php lang="en">
+<?php include 'header.php'; ?>
 
-    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Home</title>
-</head>
 <body>
+
     <div class="backgr">
-        
+
         <!-- HEADER -->
         <header class="header">
-            
-            <a href="/msrobot.tech.PHP/home.html">
+
+            <a href="/msrobot.tech.PHP/home.php">
                 <img id="logo-item" src="assets/img/Logo.png" alt="Ảnh Logo" class="logo">
-            </a> 
+            </a>
             <nav id="nav">
                 <ul class="item-header">
-                    <li id="home"><a href="home.html">Home</a></li>
-                    <li id="tutorial"><a href="tutorials.html">Tutorial</a></li>
-                    <li id="forum"><a href="forum.html"class="active">Forum</a></li>
-                    <li id="blog"><a href="blogs.html">Blog</a></li>
-                    <li id="demo_sites" >
-                        <a id="header_down" href="#"style="width: 6rem">Demo Sites</a>
+                    <li id="home"><a href="home.php">Home</a></li>
+                    <li id="tutorial"><a href="tutorials.php">Tutorial</a></li>
+                    <li id="forum"><a href="forum.php" class="active">Forum</a></li>
+                    <li id="blog"><a href="blogs.php">Blog</a></li>
+                    <li id="demo_sites">
+                        <a id="header_down" href="#" style="width: 6rem">Demo Sites</a>
                         <ul class="header_insite">
-                            <li id="item-header_insite"><a href="basic_site_login.html">Basic Site</a></li>
-                            <li id="item-header_insite"><a href="automation_practice_site_login.html">Automation Practice Site</a></li>
-                            <li id="item-header_insite"><a href="automation_actions_site_login.html">Automation Actions Site</a></li>
-                            <li id="item-header_insite"><a href="ecommerce_site_login.html">Ecommerce Site</a></li>
+                            <li id="item-header_insite"><a href="basic_site_login.php">Basic Site</a></li>
+                            <li id="item-header_insite"><a href="automation_practice_site_login.php">Automation
+                                    Practice Site</a></li>
+                            <li id="item-header_insite"><a href="automation_actions_site_login.php">Automation Actions
+                                    Site</a></li>
+                            <li id="item-header_insite"><a href="ecommerce_site_login.php">Ecommerce Site</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -50,14 +38,14 @@
                     <button class="btn" id="btn-header_signUp">Sign up</button>
                 </div>
 
-                    <!-- <div class="btn-header">
+                <!-- <div class="btn-header">
                         <button class="btn" id="btn-header_login">Login</button>
                         <button class="btn" id="btn-header_signUp">Sign up</button>
                     </div> -->
-                
+
             </nav>
         </header>
-        
+
         <div class="title_box">
             <h1>FORUM</h1>
         </div>
@@ -72,7 +60,8 @@
         <div class="question_container-item">
             <div class="question_content">
                 <div class="title_question">
-                    <h1>categoriY <strong style="color: rgba(7, 68, 242, 1);">Q & A with Our Test Automation Architect team</strong></h1>
+                    <h1>categoriY <strong style="color: rgba(7, 68, 242, 1);">Q & A with Our Test Automation Architect
+                            team</strong></h1>
                     <button id="ask_qs">Ask Question</button>
                 </div>
                 <hr style="
@@ -80,7 +69,7 @@
                     border-width: 0.1px;
                     border-color: #AFCFFF;
                     opacity: 0.5;
-                    " >  
+                    ">
 
                 <div class="total_qs">
                     <h3>TOTAL QUESTION: <strong style="color:rgba(7, 68, 242, 1);">60</strong></h3>
@@ -101,11 +90,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -136,11 +128,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -171,11 +166,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -206,11 +204,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -241,11 +242,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -276,11 +280,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -311,11 +318,14 @@
                         </div>
 
                         <div class="box_qs">
-                            <a href="forum_2.html"><h3>Do you see this question? Q & A with our Test Automation Architect team</h3></a>
+                            <a href="forum_2.php">
+                                <h3>Do you see this question? Q & A with our Test Automation Architect team</h3>
+                            </a>
                             <span>
-                                To start your self-learning, you need to learn for free on the internet. 
-                                Its recommendations are based on a review of the existing academic 
-                                literature which is complemented by the analysis of numerous contributions by software developers, 
+                                To start your self-learning, you need to learn for free on the internet.
+                                Its recommendations are based on a review of the existing academic
+                                literature which is complemented by the analysis of numerous contributions by software
+                                developers,
                                 self-learners, and teachers of programming.
                             </span>
 
@@ -338,7 +348,7 @@
                             <span>3k Views</span>
                         </div>
                     </div>
-                    
+
                     <!-- Phân trang  -->
                     <div class="paging">
                         <nav class="paging_item">
@@ -347,7 +357,7 @@
                             <a href="#">50</a>
                             <span>Per page</span>
                         </nav>
-                        
+
                         <nav class="paging_item">
                             <a href="#">1</a>
                             <a href="#">2</a>
@@ -367,7 +377,7 @@
                     border-width: 0.1px;
                     border-color: #AFCFFF;
                     opacity: 0.5;
-                    " >
+                    ">
                 <br><br><br><br>
                 <h1>categories</h1>
                 <hr style="
@@ -375,7 +385,7 @@
                     border-width: 0.1px;
                     border-color: #AFCFFF;
                     opacity: 0.5;
-                    " >
+                    ">
                 <div class="category active">
                     <span id="number_QA">60</span>
                     <span id="name_QA">Q & A with our Test Automation Architect team</span>
@@ -385,8 +395,8 @@
                     border-width: 0.1px;
                     border-color: #AFCFFF;
                     opacity: 0.5;
-                    " >
-                <div class="category" >
+                    ">
+                <div class="category">
                     <span id="number_QA">12</span>
                     <span id="name_QA">General discussion</span>
                 </div>
@@ -395,7 +405,7 @@
                     border-width: 0.1px;
                     border-color: #AFCFFF;
                     opacity: 0.5;
-                    " >
+                    ">
 
                 <div class="img_qa">
                     <img src="assets/img/tutorials/container_3.png" alt="">
@@ -407,12 +417,12 @@
             </div>
 
 
-            
+
         </div>
 
-    
-       
-    <!-- FOOTER -->
+
+
+        <!-- FOOTER -->
         <footer id="footer">
             <div class="footer-top">
                 <div class="tutorial btm">
@@ -426,7 +436,7 @@
                             <li class="footer-item">Docker for Selenium</li>
                             <li class="footer-item">TestNG</li>
                         </ul>
-                    
+
                         <ul>
                             <li class="footer-item">Jenkis</li>
                             <li class="footer-item">Git</li>
@@ -436,7 +446,7 @@
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="demo_sites btm">
                     <h3>DEMO SITES</h3>
                     <hr>
@@ -447,7 +457,7 @@
                         <li class="footer-item">E-commerce Demo Site</li>
                     </ul>
                 </div>
-    
+
                 <div class="useful_links btm">
                     <h3>DEMO SITES</h3>
                     <hr>
@@ -458,7 +468,7 @@
                     </ul>
                 </div>
             </div>
-    
+
             <div class="footer-bottom">
                 <div class="footer-box">
                     <span>&copy; 2020 MS.Robot Corp.</span>
@@ -473,124 +483,8 @@
     </div>
 
 
-    <!-- LOGIN -->
-    <div class="wapper">
-        <div class="signUp">
-            <div class="top-signUp">
-                <h3>Sign Up and Start Learning!</h3>
-                <a id ="btn_x" class='bx bx-x'></a>
-            </div>
-            <form class="item-signUp" action="/msrobot.tech.PHP/login_email.html">
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Email" required>
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Passwork"required>
-                    <i id="icon" class='bx bx-lock' ></i>
-                </div>
-                <div class="box-sign">
-                    <input id="box_" type="index" placeholder="Verify password"required>
-                    <i id="icon" class='bx bx-lock' ></i>
-                </div>
-                <span id="note">Please use this email & password to login our Demo Sites when using Selenium Test Automation.</span>
-                <div id="check">
-                    <input id="myCheckbox" type="checkbox" required>
-                    <label for="myCheckbox">Yes! I want to receive emails with Selenium Tips and ebook!</label>
-                </div>
-                    <button id="btn_sign">Sign Up</button>
-                <div class="sign_end">
-                    <p>By signing up, you agree to our <strong style="color: rgba(7, 68, 242, 1)">Terms of Use</strong> and <strong style="color: rgba(7, 68, 242, 1)">Privacy Policy.</strong>   </p>
-                    <hr style="width: 100%; height: 1px">
-                    <span>Already have an account? <a id="login_a" href="#" style="color: rgba(7, 68, 242, 1); font-weight: 600;">Log In</a></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="login">
-            <div class="top-login">
-                <h3>Forgot password</h3>
-                <a id ="btn_y" class='bx bx-x'></a>
-            </div>
-            <form class="item-login" method="post" action="home.html">
-                <div class="box-login">
-                    <input id="box_" type="index" placeholder="Email" name="email" required>
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-login">
-                    <input id="box_" type="index" placeholder="Passwork" name="passwork" required>
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>      
-                <button id="btn_login" name="login">Login</button>
-                <div class="login_end">
-                    <p>Or <a id="passwork_rs" style="color: rgba(7, 68, 242, 1)">Forgot password</a></p>
-                    <hr style="width: 100%; height:1px">
-                    <span>Don't have an account?<a id="sign_a" href="#" style="color: rgba(7, 68, 242, 1); font-weight: 600;"> Sign up</a></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="reset_pw">
-            <div class="top-reset_pw">
-                <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong>  account!</h3>
-                <a id ="btn_z" class='bx bx-x'></a>
-            </div>
-            <form class="item-reset_pw" method="post" action="home.html">
-                <div class="box-reset_pw">
-                    <input id="box_" type="index" placeholder="Email">
-                    <i id="icon" class='bx bx-envelope'></i>
-                </div>
-                <div class="box-reset_pw">
-                    <img src="/msrobot.tech.PHP/assets/img/capcha.png" alt="Capcha">
-                </div>      
-                <button id="btn_reset_pw">Reset password</button>
-                <div class="reset_pw_end">
-                    <span>Or <a id="login_rs" style="color: rgba(7, 68, 242, 1); font-weight: 600;"> Login</a></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="reset_pw_2">
-            <div class="top-reset_pw_2">
-                <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong>  account!</h3>
-                <a id ="btn_z_2" class='bx bx-x'></a>
-            </div>
-            <div class="item-reset_pw_2">
-                <div class="box-reset_pw_2">
-                    <input id="box_" type="index" placeholder="Passwork">
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>
-                <div class="box-reset_pw_2">
-                    <input id="box_" type="index" placeholder="Passwork">
-                    <i id="icon" class='bx bx-lock'></i>
-                </div>  
-                <button id="btn_reset_pw_2">Sumbit</button>
-            </div>
-        </div>
-
-        <div class="ask_qsBox">
-            <div class="title_ask">
-                <p>Select the question category</p>
-                <button class="ask_btn bx bx-x"></button>
-            </div>
-            <div class="ask">
-                <h4>1. Special catalog, you will be expertly answered by our experts.</h4>
-                <a href="forum_qs_ask.html"><button id="q_a">Q & A with Our Test Automation Architect team</button></a> 
-                <h4>2. Free catalogory, you can ask all questions here. No login required.</h4>
-                <button id="general">General Discussion</button>
-            </div>
-        </div>
-    </div>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/home.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/sign_login.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/feedback.js"></script>
-    <script src="/msrobot.tech.PHP/assets/js/forum.js"></script>
-
+    <?php include 'footer.php'; ?>
 
 </body>
 
-</html>
+</php>

@@ -28,17 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
   var valueSpan = document.querySelector('.value');
   var quantity = 1;
 
-  decreaseBtn.addEventListener('click', function () {
-    if (quantity > 1) {
-      quantity--;
-    }
-    updateQuantityDisplay();
-  });
+  if(decreaseBtn){
+    decreaseBtn.addEventListener('click', function () {
+      if (quantity > 1) {
+        quantity--;
+      }
+      updateQuantityDisplay();
+    });
+  }
 
-  increaseBtn.addEventListener('click', function () {
-    quantity++;
-    updateQuantityDisplay();
-  });
+  if(increaseBtn){
+    increaseBtn.addEventListener('click', function () {
+      quantity++;
+      updateQuantityDisplay();
+    });
+  }
 
   function updateQuantityDisplay() {
     if (quantity > 1) {
@@ -61,16 +65,21 @@ var reviews_item = document.querySelector('.reviewss');
 var triangle = document.querySelector('.triangle');
 
 
-reviews.addEventListener('click', function(){
-  description_item.style.display = 'none';
-  reviews_item.style.display = 'block';
-  triangle.style.transform = 'translateX(21rem)';
-})
-description.addEventListener('click', function(){
-  description_item.style.display = 'block';
-  reviews_item.style.display = 'none';
-  triangle.style.transform = 'translateX(3.3rem)';
-})
+if(reviews){
+  reviews.addEventListener('click', function(){
+    description_item.style.display = 'none';
+    reviews_item.style.display = 'block';
+    triangle.style.transform = 'translateX(21rem)';
+  });
+}
+
+if(description){
+  description.addEventListener('click', function(){
+    description_item.style.display = 'block';
+    reviews_item.style.display = 'none';
+    triangle.style.transform = 'translateX(3.3rem)';
+  });
+}
 
 
 
@@ -97,10 +106,12 @@ var slides_boxs = document.querySelectorAll('.boxs');
     }
     updateSlide();
   }
+
   function updateSlide(){
-    var translateX =  -(slideWidth + slideMargin) * slideIndex;
-    containerSlide.style.transform = 'translateX(' + translateX + 'rem)';
-    
+    if(containerSlide){
+      var translateX =  -(slideWidth + slideMargin) * slideIndex;
+      containerSlide.style.transform = 'translateX(' + translateX + 'rem)';
+    }
   }
 
 
