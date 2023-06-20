@@ -97,6 +97,19 @@
         </div>
     </div>
 
+    <div class="ask_qsBox">
+        <div class="title_ask">
+            <p>Select the question category</p>
+            <button class="ask_btn bx bx-x"></button>
+        </div>
+        <div class="ask">
+            <h4>1. Special catalog, you will be expertly answered by our experts.</h4>
+            <a href="forum_qs_ask.php"><button id="q_a">Q & A with Our Test Automation Architect team</button></a>
+            <h4>2. Free catalogory, you can ask all questions here. No login required.</h4>
+            <button id="general">General Discussion</button>
+        </div>
+    </div>
+
 </div>
 
 

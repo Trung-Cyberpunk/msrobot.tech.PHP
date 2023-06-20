@@ -43,7 +43,7 @@
                         <button class="btn" id="btn-header_signUp">Sign up</button>
                     </div>
 
-                    <div class="account" style="display: none;">
+                    <div class="account">
                         <img src="assets/img/blog_img/Rectangle_2.png" alt="ảnh đại diện">
                         <div class="account_name">
                             <h3 id="account_name">John.morgan@gmail.com</h3>
