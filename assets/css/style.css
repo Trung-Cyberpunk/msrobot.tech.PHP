@@ -151,13 +151,15 @@ body{
     line-height: 2rem;
 }
 
-.account_name span{
+/* .account_name form #btn_logout {
+    border: none;
+    background-color: var(--bg-color);
     font-size: 1.3rem;
     font-family: 500;
     color: var(--item-color);
     cursor: pointer;
     transition: all ease-in-out 0.2s;
-}
+} */
 
 .account_name span:hover{
     opacity: 0.8;

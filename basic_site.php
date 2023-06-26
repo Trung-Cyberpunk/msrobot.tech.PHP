@@ -22,23 +22,78 @@
                         <li id="forum"><a href="forum.php">Forum</a></li>
                         <li id="blog"><a href="blogs.php">Blog</a></li>
                         <li id="demo_sites">
-                            <a id="header_down" href="#" style="width: 6rem" class="active">Demo Sites</a>
+                            <?php
+                        if(isset($_COOKIE['user'])){
+                            echo '<a id="header_down" href="#" style="width: 6rem" class="active">Demo Sites</a>
+                            <ul class="header_insite">
+                                <li id="item-header_insite"><a href="basic_site.php">Basic Site</a></li>
+                                <li id="item-header_insite"><a href="automation_practice_site.php">Automation
+                                        Practice Site</a></li>
+                                <li id="item-header_insite"><a href="automation_actions_site.php">Automation
+                                        Actions
+                                        Site</a></li>
+                                <li id="item-header_insite"><a href="ecommerce_site.php">Ecommerce Site</a></li>
+                            </ul>';
+                        }else{
+                            echo '<a id="header_down" href="#" style="width: 6rem">Demo Sites</a>
                             <ul class="header_insite">
                                 <li id="item-header_insite"><a href="basic_site_login.php">Basic Site</a></li>
-                                <li id="item-header_ins ite"><a href="automation_practice_site_login.php">Automation
+                                <li id="item-header_insite"><a href="automation_practice_site_login.php">Automation
                                         Practice Site</a></li>
                                 <li id="item-header_insite"><a href="automation_actions_site_login.php">Automation
-                                        Actions Site</a></li>
+                                        Actions
+                                        Site</a></li>
                                 <li id="item-header_insite"><a href="ecommerce_site_login.php">Ecommerce Site</a></li>
-                            </ul>
+                            </ul>';
+                        }
+                        ?>
                         </li>
                     </ul>
                     <img id="img-header" src="/msrobot.tech.PHP/assets/img/canada_tpl.png" alt="">
 
-                    <div class="btn-header">
-                        <button class="btn" id="btn-header_login">Login</button>
-                        <button class="btn" id="btn-header_signUp">Sign up</button>
-                    </div>
+                    <!-- đăng nhập -->
+                    <?php
+                    
+                    // Kiểm tra xem cookie có tồn tại hay không
+                    if (isset($_COOKIE['user'])) {
+                        // Lấy giá trị của cookie email
+                        $email = $_COOKIE['user'];
+                        // Hiển thị khối account với tên email và nút logout
+
+                        // Xử lý logout
+                        
+                        echo '
+                            <div class="account">
+                                <img src="assets/img/blog_img/Rectangle_2.png" alt="ảnh đại diện">
+                                <div class="account_name">
+                                    <h3 id="account_name">'      . $email . '</h3>
+                                    <form method="post">
+                                        <button id = "btn_logout" type="submit" name="logout" 
+                                        style="
+                                                border: none;
+                                                background-color: var(--bg-color);
+                                                font-size: 1.3rem;
+                                                font-family: 500;
+                                                color: var(--item-color);
+                                                cursor: pointer;
+                                                transition: all ease-in-out 0.2s;
+                                            ">
+                                            Logout
+                                            </button>
+                                    </form>
+                                </div>
+                            </div>';
+                    } else {
+                        // Hiển thị khối btn với nút Login và Sign up
+                        echo '
+                            <div class="btn-header">
+                                <button class="btn" id="btn-header_login">Login</button>
+                                <button class="btn" id="btn-header_signUp">Sign up</button>
+                            </div>';
+                    }
+
+                    
+                    ?>
 
                     <!-- <div class="btn-header">
                         <button class="btn" id="btn-header_login">Login</button>

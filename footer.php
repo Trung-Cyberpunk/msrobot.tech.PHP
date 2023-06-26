@@ -1,5 +1,6 @@
 <div class="wapper">
     <div class="signUp">
+
         <div class="top-signUp">
             <h3>Sign Up and Start Learning!</h3>
             <a id="btn_x" class='bx bx-x'></a>
@@ -10,7 +11,7 @@
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-sign">
-                <input id="box_" type="index" placeholder="Passwork" required>
+                <input id="box_" type="index" placeholder="Password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-sign">
@@ -35,18 +36,22 @@
         </form>
     </div>
 
+
+
+
+
     <div class="login">
         <div class="top-login">
-            <h3>Forgot password</h3>
+            <h3>Log in to your</h3>
             <a id="btn_y" class='bx bx-x'></a>
         </div>
-        <form class="item-login" method="post" action="home.php">
+        <form class="item-login" method="post" action="">
             <div class="box-login">
-                <input id="box_" type="index" placeholder="Email" name="email" required>
+                <input id="box_" type="text" placeholder="Email" name="email" required>
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-login">
-                <input id="box_" type="index" placeholder="Passwork" name="passwork" required>
+                <input id="box_" type="password" placeholder="Password" name="password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <button id="btn_login" name="login">Login</button>
@@ -61,7 +66,7 @@
 
     <div class="reset_pw">
         <div class="top-reset_pw">
-            <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong> account!</h3>
+            <h3>Forgot password<strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong> account!</h3>
             <a id="btn_z" class='bx bx-x'></a>
         </div>
         <form class="item-reset_pw" method="post">

@@ -83,6 +83,8 @@ if(description){
 
 
 
+
+
 // slider
   
 var slideIndex = 0;
@@ -99,6 +101,7 @@ var slides_boxs = document.querySelectorAll('.boxs');
     }
     updateSlide();
   }
+  
   function slideNext(){
     slideIndex++;
     if(slideIndex >= slides_boxs.length - 3){

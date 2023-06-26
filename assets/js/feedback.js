@@ -22,6 +22,14 @@ if(remove_fb){
 }
 
 
+function updateSlide(){
+    if(containerSlide){
+      var translateX =  -(slideWidth + slideMargin) * slideIndex;
+      containerSlide.style.transform = 'translateX(' + translateX + 'rem)';
+    }
+  }
+
+
 //khảo sát hài lòng (sad, like, angry...)
 const imageContainers = document.querySelectorAll('.container_icon'); //chọn 1 phần tử chứa ảnh và text
 // nummm = imageContainers.length;
