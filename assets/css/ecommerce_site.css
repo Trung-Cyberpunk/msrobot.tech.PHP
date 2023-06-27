@@ -17,7 +17,7 @@
 }
 
 /* Phone */
-.container_phone{
+.container_phone {
     max-width: 70%;
     width: 100%;
     display: grid;
@@ -33,7 +33,18 @@
     cursor: pointer;
     padding: 1rem;
     transition: all ease-in 0.2s;
+    animation: fadeIn 1s ease-in-out;
 }
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 .box_phone strong{
     font-size: 1.5rem;
     font-weight: 700;

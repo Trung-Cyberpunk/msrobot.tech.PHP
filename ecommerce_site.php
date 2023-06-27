@@ -5,7 +5,7 @@
     <head>
         <?php 
             include 'header.php'; 
-            include 'product.php';        
+            include 'product.php';                    
         ?>
     </head>
 
@@ -112,27 +112,14 @@
 
             <div class="ecommerce_site">
                 <!-- Phone -->
+
                 <div class="container_phone">
+                    <!-- Xử lý ajax file js và fetch_data.php -->
 
-                    <?php
-                    while($row = mysqli_fetch_assoc($r)){
-                        $p_name = $row['name_Product'];
-                        $p_price = $row['price_Product'];
-                        $p_img = $row['img_Product'];
-                    
-                    ?>
-                    <a href="ecommerce_product.php">
-                        <div class="box_phone">
-                            <img src="assets/img/phone/<?php echo $p_img;?>" alt="Samsung Galaxy S8">
-                            <h3 class="title_phone"><?php echo $p_name;?></h3>
-                            <strong class="price">$<?php echo $p_price;?>.00</strong>
-                        </div>
-                    </a>
-
-                    <?php } ?>
 
 
                 </div>
+
                 <!-- search_phone -->
                 <div class="search_phone">
                     <div class="search_box">
@@ -200,6 +187,9 @@
                     <p>
                         <label for="amount">Price:</label>
                         <input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+
+                        <!-- <input type="text" class="from" value="1" readonly />
+                        <input type="text" class="to" value="1900" readonly /> -->
                     </p>
 
                     <div class="popular">

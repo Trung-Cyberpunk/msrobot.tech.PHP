@@ -123,7 +123,7 @@
 <script src="/msrobot.tech.PHP/assets/js/sign_login.js"></script>
 <script src="/msrobot.tech.PHP/assets/js/feedback.js"></script>
 <script src="/msrobot.tech.PHP/assets/js/forum.js"></script>
-<script src="assets/js/droop_qs.js"></script>
+<script src="/msrobot.tech.PHP/assets/js/droop_qs.js"></script>
 <script src="/msrobot.tech.PHP/assets/js/actions_stie.js"></script>
 <script src="/msrobot.tech.PHP/assets/js/ecommerce_site.js"></script>
 <script src="/msrobot.tech.PHP/assets/js/basic_site.js"></script>

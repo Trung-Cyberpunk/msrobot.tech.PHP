@@ -2,33 +2,47 @@
 // Xử lý thanh lọc đơn giá với việc sử dụng thư viện Jquery UI
 
 $(document).ready(function () {
-
-  var initialValue1;
-  var initialValue2;
-  function filterProduct(){
-    var min = '$' + $('#slider-range').slider('values', 0);
-    var max = '$' + $('#slider-range').slider('values', 1);
-    alert(max + min);
-  }
   // Tạo range slider với giá trị từ 0 đến 1000
-  $('#slider-range').slider({
-    range: true,
-    min: 0,
-    max: 1900,
-    values: [0, 1900],
-    slide: function (event, ui) {
-      var value1 = '$' + ui.values[0];
-      var value2 = '$' + ui.values[1];
-      $('#amount').val(value1 + ' - ' + value2);
-      // initialValue1 = value1;
-      // initialValue1 = value2;
-    },  
-  });
 
-  initialValue1 = '$' + $('#slider-range').slider('values', 0);
-  initialValue2 = '$' + $('#slider-range').slider('values', 1);
-  $('#amount').val(initialValue1 + ' - ' + initialValue2);
-
+  var value1;
+  var value2;
+  
+  function filterProduct(){
+    var min = value1;
+    var max = value2;  
+    // console.log(max);
+    $.ajax({
+      url: 'fetch_data.php',
+      type: "POST",
+      data:{min:min, max:max},
+      success:function(data){
+        $(".container_phone").html(data);
+      }
+    });
+  }
+  function initializeSlider(){
+    $('#slider-range').slider({
+      range: true,
+      min: 1,
+      max: 1900,
+      values: [1, 1900],
+      slide: function (event, ui) {
+        value1 = ui.values[0];
+        value2 = ui.values[1];
+        $('#amount').val(value1 + ' - ' + value2);
+        filterProduct();
+      },  
+    });
+    
+    initialValue1 = '$' + $('#slider-range').slider('values', 0);
+    initialValue2 = '$' + $('#slider-range').slider('values', 1);
+    $('#amount').val(initialValue1 + ' - ' + initialValue2);
+  }
+  
+  //gọi hàm để tải dữ liệu ban đầu
+  
+  initializeSlider();
+  filterProduct();
 });
 
 // quantity
