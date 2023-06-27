@@ -3,7 +3,10 @@
 <php lang="en">
 
     <head>
-        <?php include 'header.php'; ?>
+        <?php 
+            include 'header.php'; 
+            include 'product.php';        
+        ?>
     </head>
 
     <body>
@@ -110,74 +113,25 @@
             <div class="ecommerce_site">
                 <!-- Phone -->
                 <div class="container_phone">
+
+                    <?php
+                    while($row = mysqli_fetch_assoc($r)){
+                        $p_name = $row['name_Product'];
+                        $p_price = $row['price_Product'];
+                        $p_img = $row['img_Product'];
+                    
+                    ?>
                     <a href="ecommerce_product.php">
                         <div class="box_phone">
-                            <img src="assets/img/phone/s9.png" alt="Samsung Galaxy S8">
-                            <h3 class="title_phone">Samsung Galaxy S8</h3>
-                            <strong class="price">$139.00</strong>
+                            <img src="assets/img/phone/<?php echo $p_img;?>" alt="Samsung Galaxy S8">
+                            <h3 class="title_phone"><?php echo $p_name;?></h3>
+                            <strong class="price">$<?php echo $p_price;?>.00</strong>
                         </div>
                     </a>
-                    <a href="ecommerce_product.php">
-                        <div class="box_phone">
-                            <img src="assets/img/phone/s8pls.png" alt="Samsung Galaxy S8">
-                            <h3 class="title_phone">Samsung Galaxy S8</h3>
-                            <strong class="price">$139.00</strong>
-                        </div>
-                    </a>
-                    <a href="ecommerce_product.php">
-                        <div class="box_phone">
-                            <img src="assets/img/phone/note8.png" alt="Samsung Galaxy S8">
-                            <h3 class="title_phone">Samsung Galaxy S8</h3>
-                            <strong class="price">$139.00</strong>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="box_phone">
-                            <img src="assets/img/phone/s9.png" alt="Samsung Galaxy S8">
-                            <h3 class="title_phone">Samsung Galaxy S8</h3>
-                            <strong class="price">$139.00</strong>
-                        </div>
-                    </a>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/s9pls.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/xs.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/xr.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/x.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/xs.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/mi8xiaomi.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/nokia7pls.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
-                    <div class="box_phone">
-                        <img src="assets/img/phone/s5pro.png" alt="Samsung Galaxy S8">
-                        <h3 class="title_phone">Samsung Galaxy S8</h3>
-                        <strong class="price">$139.00</strong>
-                    </div>
+
+                    <?php } ?>
+
+
                 </div>
                 <!-- search_phone -->
                 <div class="search_phone">
@@ -250,6 +204,9 @@
 
                     <div class="popular">
                         <h3>Popular Products</h3>
+
+
+
                         <div class="popular_item">
                             <img src="assets/img/phone/7pls.png" alt="">
                             <div class="popular_phone">
@@ -258,6 +215,8 @@
                                 <span style="color:rgba(75, 145, 249, 1)">$159</span>
                             </div>
                         </div>
+
+
                         <!--  -->
                         <div class="popular_item">
                             <img src="assets/img/phone/xr.png" alt="">

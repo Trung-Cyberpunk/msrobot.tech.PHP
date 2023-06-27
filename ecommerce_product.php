@@ -208,6 +208,9 @@
                             <h3>Samsumg Galaxy S9</h3>
                             <span id="prices">$139</span>
                         </div>
+
+
+
                         <div class="boxs">
                             <a href="ecommerce_product.php">
                                 <img src="assets/img/phone/7pls.png" alt="Phone">

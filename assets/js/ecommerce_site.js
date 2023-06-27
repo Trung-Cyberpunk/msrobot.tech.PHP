@@ -1,7 +1,15 @@
 
 // Xử lý thanh lọc đơn giá với việc sử dụng thư viện Jquery UI
 
-$(function () {
+$(document).ready(function () {
+
+  var initialValue1;
+  var initialValue2;
+  function filterProduct(){
+    var min = '$' + $('#slider-range').slider('values', 0);
+    var max = '$' + $('#slider-range').slider('values', 1);
+    alert(max + min);
+  }
   // Tạo range slider với giá trị từ 0 đến 1000
   $('#slider-range').slider({
     range: true,
@@ -12,12 +20,15 @@ $(function () {
       var value1 = '$' + ui.values[0];
       var value2 = '$' + ui.values[1];
       $('#amount').val(value1 + ' - ' + value2);
-    },
+      // initialValue1 = value1;
+      // initialValue1 = value2;
+    },  
   });
 
-  var initialValue1 = '$' + $('#slider-range').slider('values', 0);
-  var initialValue2 = '$' + $('#slider-range').slider('values', 1);
+  initialValue1 = '$' + $('#slider-range').slider('values', 0);
+  initialValue2 = '$' + $('#slider-range').slider('values', 1);
   $('#amount').val(initialValue1 + ' - ' + initialValue2);
+
 });
 
 // quantity
