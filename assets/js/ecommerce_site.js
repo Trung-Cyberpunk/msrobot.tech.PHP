@@ -7,6 +7,7 @@ $(document).ready(function () {
   var value1;
   var value2;
   
+  // sử dụng ajax
   function filterProduct(){
     var min = value1;
     var max = value2;  
@@ -29,16 +30,16 @@ $(document).ready(function () {
       slide: function (event, ui) {
         value1 = ui.values[0];
         value2 = ui.values[1];
-        $('#amount').val(value1 + ' - ' + value2);
+        $('#amount').val('$' + value1 + ' - ' +'$'+ value2);
         filterProduct();
       },  
     });
     
     initialValue1 = '$' + $('#slider-range').slider('values', 0);
     initialValue2 = '$' + $('#slider-range').slider('values', 1);
-    $('#amount').val(initialValue1 + ' - ' + initialValue2);
+    $('#amount').val( initialValue1 + ' - ' + initialValue2);
   }
-  
+
   //gọi hàm để tải dữ liệu ban đầu
   
   initializeSlider();

@@ -1,21 +1,22 @@
 <div class="wapper">
+
     <div class="signUp">
 
         <div class="top-signUp">
             <h3>Sign Up and Start Learning!</h3>
             <a id="btn_x" class='bx bx-x'></a>
         </div>
-        <form class="item-signUp" action="/msrobot.tech.PHP/login_email.php">
+        <form class="item-signUp" action="" method="post">
             <div class="box-sign">
-                <input id="box_" type="index" placeholder="Email" required>
+                <input id="box_" type="index" name="email" placeholder="Email" required>
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-sign">
-                <input id="box_" type="index" placeholder="Password" required>
+                <input id="box_" type="index" name="password" placeholder="Password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-sign">
-                <input id="box_" type="index" placeholder="Verify password" required>
+                <input id="box_" type="index" name="confirmpassword" placeholder="Verify password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <span id="note">Please use this email & password to login our Demo Sites when using Selenium Test
@@ -24,7 +25,7 @@
                 <input id="myCheckbox" type="checkbox" required>
                 <label for="myCheckbox">Yes! I want to receive emails with Selenium Tips and ebook!</label>
             </div>
-            <button id="btn_sign">Sign Up</button>
+            <button id="btn_sign" name="sigup">Sign Up</button>
             <div class="sign_end">
                 <p>By signing up, you agree to our <strong style="color: rgba(7, 68, 242, 1)">Terms of Use</strong> and
                     <strong style="color: rgba(7, 68, 242, 1)">Privacy Policy.</strong>
@@ -35,8 +36,6 @@
             </div>
         </form>
     </div>
-
-
 
 
 
@@ -63,6 +62,7 @@
             </div>
         </form>
     </div>
+
 
     <div class="reset_pw">
         <div class="top-reset_pw">

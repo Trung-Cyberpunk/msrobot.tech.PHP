@@ -18,7 +18,7 @@
                         <li id="forum"><a href="#">Forum</a></li>
                         <li id="blog"><a href="#">Blog</a></li>
                         <li id="demo_sites">
-                            <a id="header_down" href="#" style="width: 6rem">Demo Sites</a>
+
                             <?php
                         if(isset($_COOKIE['user'])){
                             echo '<a id="header_down" href="#" style="width: 6rem">Demo Sites</a>

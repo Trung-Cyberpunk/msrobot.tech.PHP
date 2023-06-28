@@ -1,6 +1,6 @@
 <head>
     <?php
-    include 'login.php';
+    include 'login_registration.php';
     ?>
 
     <meta charset="UTF-8">
