@@ -8,15 +8,15 @@
         </div>
         <form class="item-signUp" action="" method="post">
             <div class="box-sign">
-                <input id="box_" type="index" name="email" placeholder="Email" required>
+                <input id="box_" type="email" name="email" placeholder="Email" required>
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-sign">
-                <input id="box_" type="index" name="password" placeholder="Password" required>
+                <input id="box_" type="password" name="password" placeholder="Password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-sign">
-                <input id="box_" type="index" name="confirmpassword" placeholder="Verify password" required>
+                <input id="box_" type="password" name="confirmpassword" placeholder="Verify password" required>
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <span id="note">Please use this email & password to login our Demo Sites when using Selenium Test

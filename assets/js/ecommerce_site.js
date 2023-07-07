@@ -6,16 +6,31 @@ $(document).ready(function () {
 
   var value1;
   var value2;
+  var searchData;
+
+  $(".search_box").submit(function(event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+  
+    searchData = $(".datasearch").val(); // Lấy dữ liệu từ form tìm kiếm
+  
+    filterProduct(); // Gọi hàm xử lý tìm kiếm
+  });
   
   // sử dụng ajax
+  // Data lọc giá theo thanh trượt
   function filterProduct(){
     var min = value1;
     var max = value2;  
     // console.log(max);
     $.ajax({
-      url: 'fetch_data.php',
+      // url: 'fetch_data.php', //file sử dụng cũ để xử lý tìm kiếm và lọc giá
+      url: 'test_fetch.php',
       type: "POST",
-      data:{min:min, max:max},
+      data:{
+            min:min, 
+            max:max, 
+            searchData: searchData 
+          },
       success:function(data){
         $(".container_phone").html(data);
       }
@@ -45,6 +60,9 @@ $(document).ready(function () {
   initializeSlider();
   filterProduct();
 });
+
+
+// Search   
 
 // quantity
 

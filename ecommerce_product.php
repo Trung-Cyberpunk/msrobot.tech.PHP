@@ -1,4 +1,28 @@
 <?php $pageTitle = 'Ecommerce';?>
+
+
+<?php   
+
+if (isset($_GET['id'])) {
+include "db_connection.php";
+  $product_id = $_GET['id'];
+  $sql = "SELECT * FROM product WHERE id = '$product_id'";
+
+  $result = mysqli_query($conn, $sql);
+  $count = mysqli_num_rows($result);    
+  
+  if($count == 0){
+    echo "erro";
+  }else{
+    $row = mysqli_fetch_assoc($result);
+    $p_name = $row['name_Product'];
+    $p_price = $row['price_Product'];
+    $p_img = $row['img_Product'];
+    $p_info = $row['information_Product'];
+  }
+?>
+
+
 <!DOCTYPE php>
 <php lang="en">
 
@@ -111,12 +135,12 @@
                 <div class="name_product">
                     <a href="ecommerce_site.php" class="color_product" id="itemproduct">Home</a>
                     <span class='bx bx-chevron-right'></span>
-                    <a href="#phone" id="itemproduct">Galaxy S8</a>
+                    <a href="#phone" id="itemproduct"><?php echo $p_name; ?></a>
                 </div>
                 <div class="information_phone">
-                    <img src="assets/img/phone/s8pls.png" alt="Samsumg S8">
+                    <img src="assets/img/phone/<?php echo $p_img; ?>" alt="Samsumg S8">
                     <div class="item_information">
-                        <h2>Galaxy Galaxy S8</h2>
+                        <h2><?php echo $p_name; ?></h2>
                         <div class="rating">
                             <span class="bx bxs-star"></span>
                             <span class="bx bxs-star"></span>
@@ -126,9 +150,7 @@
                             <span class="vote">6376</span>
                         </div>
                         <p>
-                            The Galaxy S8 expansive display stretches from edge to edge,
-                            giving you the most amount of screen in the least amount of space.
-                            And the Galaxy S8+ is even more expansive — our biggest screen yet.¹
+                            <?php echo $p_info; ?>
                         </p>
                         <div class="container_quatity">
                             <h4>Quantity</h4>
@@ -139,7 +161,7 @@
                                     <button class="decrease bx bxs-down-arrow"></button>
                                 </div>
                             </div>
-                            <h3 id="price_item">$649.99</h3>
+                            <h3 id="price_item">$<?php echo $p_price; ?>.00</h3>
                             <button class="add-cart">Add to cart<i class='bx bx-chevron-right'></i></button>
                         </div>
                     </div>
@@ -188,7 +210,10 @@
                         </div>
                     </div>
                 </div>
-
+                <?php
+                
+}
+?>
                 <div class="related_product">
                     <div class="related_item">
                         <h3>Related Product</h3>
@@ -199,60 +224,34 @@
                     </div>
 
                     <div class="box_related">
+                        <?php
+                    include "db_connection.php";    
+                    $sql_4 = "SELECT * FROM product";
+                    $result_4 = mysqli_query($conn, $sql_4);
+                    $count_4 = mysqli_num_rows($result_4);
 
+                    if($count_4 == 0){
+                        echo "không tồn tại sản phẩm";
+                    }else{
+                        while ($row = mysqli_fetch_assoc($result_4)){
+                            $p_name = $row['name_Product'];
+                            $p_price = $row['price_Product'];
+                            $p_img = $row['img_Product'];
+                            ?>
 
                         <div class="boxs">
                             <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/note9.png" alt="Phone">
+                                <img src="assets/img/phone/<?php echo $p_img; ?>" alt="Phone">
                             </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
+                            <h3><?php echo $p_name; ?></h3>
+                            <span id="prices">$<?php echo $p_price; ?>.00</span>
                         </div>
+                        <?php
+                        }
+                    }
+                    mysqli_close($conn);//đóng database
+                    ?>
 
-
-
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/7pls.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/mi8.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/nokia7pls.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/note9.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/x.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
-                        <div class="boxs">
-                            <a href="ecommerce_product.php">
-                                <img src="assets/img/phone/s5pro.png" alt="Phone">
-                            </a>
-                            <h3>Samsumg Galaxy S9</h3>
-                            <span id="prices">$139</span>
-                        </div>
                     </div>
                 </div>
 

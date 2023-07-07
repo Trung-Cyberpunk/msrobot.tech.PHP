@@ -109,23 +109,26 @@
                 <h1>ECOMMERCE SITE</h1>
             </div>
 
-
             <div class="ecommerce_site">
                 <!-- Phone -->
 
                 <div class="container_phone">
+
                     <!-- Xử lý ajax file js và fetch_data.php -->
-
-
 
                 </div>
 
                 <!-- search_phone -->
+
+
+
                 <div class="search_phone">
-                    <div class="search_box">
-                        <input type="text" placeholder="Search">
-                        <button type="submit" class="bx bx-search"></button>
-                    </div>
+                    <!-- Box tìm kiếm -->
+
+                    <form class="search_box" method="post" action="">
+                        <input type="text" placeholder="Search" class="datasearch">
+                        <button type="submit" class="bx bx-search" name="btn_search"></button>
+                    </form>
 
                     <div class="categories">
                         <h3 class="title_categories">Categories</h3>
@@ -187,9 +190,6 @@
                     <p>
                         <label for="amount">Price:</label>
                         <input type="text" id="amount" readonly style="border:0; font-weight:bold;">
-
-                        <!-- <input type="text" class="from" value="1" readonly />
-                        <input type="text" class="to" value="1900" readonly /> -->
                     </p>
 
                     <div class="popular">
