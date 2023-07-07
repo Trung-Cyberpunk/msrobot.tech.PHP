@@ -2,7 +2,7 @@
 
 
 <?php   
-
+//Truyền id từ sản phẩm và in ra thông tin 
 if (isset($_GET['id'])) {
 include "db_connection.php";
   $product_id = $_GET['id'];
@@ -155,6 +155,7 @@ include "db_connection.php";
                         <div class="container_quatity">
                             <h4>Quantity</h4>
                             <div class="quantity">
+                                <!-- value -->
                                 <span class="value">Only 1</span>
                                 <div class="up_down-quantity">
                                     <button class="increase bx bxs-up-arrow"></button>
@@ -175,6 +176,7 @@ include "db_connection.php";
                     <div id="hr">
                         <div class="triangle"></div>
                     </div>
+
                     <div class="description">
                         <p>
                             One touch of a red-hot stove is usually all we need to avoid that kind of discomfort in the
@@ -186,7 +188,8 @@ include "db_connection.php";
                             including the most common of all making mistakes.
                         </p>
                     </div>
-                    <div class="reviewss" style="display: none;">
+
+                    <form class="reviewss" style="display: none;" method="post">
                         <p>
                             There are no reviews yet.
                             <br>
@@ -205,10 +208,22 @@ include "db_connection.php";
                         <textarea name="" id="note_rv" placeholder="Your Review*"></textarea>
                         <div class="rv_mail">
                             <input type="text" id="name_rv" placeholder="Name *">
-                            <input type="text" id="mail_rv" placeholder="Email *">
+                            <input type="email" id="mail_rv" placeholder="Email *">
                             <button class="btn_rv">Submit</button>
                         </div>
-                    </div>
+
+                        <div class="reivew_box">
+                            <div class="user_review">
+                                <img src="" alt="">
+                                <h4 id="name_user">Critical Skeptic</h4>
+                                <span>Excellent phone, beautiful aesthetics, and a taste of the future worth paying for:
+                                    9/10.</span>
+                            </div>
+
+                        </div>
+
+                    </form>
+
                 </div>
                 <?php
                 
@@ -234,13 +249,14 @@ include "db_connection.php";
                         echo "không tồn tại sản phẩm";
                     }else{
                         while ($row = mysqli_fetch_assoc($result_4)){
+                            $p_id = $row['id'];
                             $p_name = $row['name_Product'];
                             $p_price = $row['price_Product'];
                             $p_img = $row['img_Product'];
                             ?>
 
                         <div class="boxs">
-                            <a href="ecommerce_product.php">
+                            <a href="ecommerce_product.php?id=<?php echo $p_id?>">
                                 <img src="assets/img/phone/<?php echo $p_img; ?>" alt="Phone">
                             </a>
                             <h3><?php echo $p_name; ?></h3>
