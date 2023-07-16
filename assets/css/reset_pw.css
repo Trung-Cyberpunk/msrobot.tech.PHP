@@ -102,13 +102,11 @@ body{
     font-size: 1.4rem;
     color: var(--bg-color);
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #btn_reset_pw:hover{
     cursor: pointer;
-    background-color: var(--bg-color);
-    border: solid var(--item-color) 3px;
-    color: var(--item-color);
+    opacity: 0.7;
 }
 .reset_pw_end{
     display: block;
@@ -211,7 +209,5 @@ body{
 }
 #btn_reset_pw_2:hover{
     cursor: pointer;
-    background-color: var(--bg-color);
-    border: solid var(--item-color) 3px;
-    color: var(--item-color);
+    opacity: 0.7;
 }

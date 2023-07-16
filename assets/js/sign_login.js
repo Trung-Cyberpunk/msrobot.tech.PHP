@@ -93,12 +93,14 @@ const reset_pw_2 = document.querySelector(".reset_pw_2");
 const btn_z_2 = document.querySelector("#btn_z_2");
 
 btn_reset.onclick = () =>{
+
     reset_pw_2.classList.add("active");
     reset_pw.classList.remove("active");
     backgr.classList.add("opacity");
 }
 
-btn_z_2.onclick = () => {
+btn_z_2.onclick = (event) => {
+    event.preventDefault();
     reset_pw_2.classList.remove("active");  
     backgr.classList.remove("opacity");
 }

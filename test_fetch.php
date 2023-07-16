@@ -11,7 +11,8 @@ if (isset($_POST['min']) && isset($_POST['max'])) {
     
   } elseif (isset($_POST['searchData'])) { //kiểm tra tìm kiếm
     $search = $_POST['searchData'];
-    // thực hiện
+    // thực hiện 
+    
     $sql = "SELECT * FROM product WHERE name_Product LIKE '%$search%'";
 
   } else {// Nếu không có AJAX request ban đầu 

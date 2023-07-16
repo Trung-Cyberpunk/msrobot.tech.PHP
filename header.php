@@ -1,7 +1,9 @@
 <head>
     <?php
     include 'login_registration.php';
+    
     ?>
+
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,6 +27,9 @@
     <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/basic_site.css">
     <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/contact_us.css">
     <link rel="stylesheet" href="/msrobot.tech.PHP/assets/css/contact_us.css">
+
+    <!-- Captcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 

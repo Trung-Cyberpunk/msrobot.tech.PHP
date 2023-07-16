@@ -1,4 +1,8 @@
 <div class="wapper">
+    <?php 
+include 'reset_pw.php'  
+?>
+
 
     <div class="signUp">
 
@@ -64,24 +68,29 @@
     </div>
 
 
+
     <div class="reset_pw">
+
         <div class="top-reset_pw">
-            <h3>Forgot password<strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong> account!</h3>
+            <h3>Forgot password<strong style="color: rgba(7, 68, 242, 1);"> Ms.Robot</strong> account!</h3>
             <a id="btn_z" class='bx bx-x'></a>
         </div>
         <form class="item-reset_pw" method="post">
             <div class="box-reset_pw">
-                <input id="box_" type="index" placeholder="Email">
+                <input id="box_" type="email" placeholder="Email" name="email_rs" required>
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-reset_pw">
-                <img src="/msrobot.tech.PHP/assets/img/capcha.png" alt="Capcha">
+                <div class="g-recaptcha" data-sitekey="6Lfq8g8nAAAAAHLM_YmdTJdicHn7za549MaYaWTU" required
+                    name="g-recaptcha-response"></div>
+                <br>
             </div>
             <button id="btn_reset_pw">Reset password</button>
             <div class="reset_pw_end">
                 <span>Or <a id="login_rs" style="color: rgba(7, 68, 242, 1); font-weight: 600;"> Login</a></span>
             </div>
         </form>
+
     </div>
 
     <div class="reset_pw_2">
@@ -91,11 +100,11 @@
         </div>
         <div class="item-reset_pw_2">
             <div class="box-reset_pw_2">
-                <input id="box_" type="index" placeholder="Passwork">
+                <input id="box_" type="password" placeholder="Password">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-reset_pw_2">
-                <input id="box_" type="index" placeholder="Passwork">
+                <input id="box_" type="password" placeholder="Password">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <button id="btn_reset_pw_2">Sumbit</button>
