@@ -1,7 +1,5 @@
 <div class="wapper">
-    <?php 
-include 'reset_pw.php'  
-?>
+
 
 
     <div class="signUp">
@@ -41,8 +39,6 @@ include 'reset_pw.php'
         </form>
     </div>
 
-
-
     <div class="login">
         <div class="top-login">
             <h3>Log in to your</h3>
@@ -69,20 +65,23 @@ include 'reset_pw.php'
 
 
 
-    <div class="reset_pw">
+
+
+    <div class="reset_pw" id="resetPwDiv">
 
         <div class="top-reset_pw">
             <h3>Forgot password<strong style="color: rgba(7, 68, 242, 1);"> Ms.Robot</strong> account!</h3>
             <a id="btn_z" class='bx bx-x'></a>
         </div>
-        <form class="item-reset_pw" method="post">
+
+        <form class="item-reset_pw" id="resetPwForm" method="post">
             <div class="box-reset_pw">
-                <input id="box_" type="email" placeholder="Email" name="email_rs" required>
+                <input id="emailInput" class="box_" type="email" placeholder="Email" name="email" required>
                 <i id="icon" class='bx bx-envelope'></i>
             </div>
             <div class="box-reset_pw">
                 <div class="g-recaptcha" data-sitekey="6Lfq8g8nAAAAAHLM_YmdTJdicHn7za549MaYaWTU" required
-                    name="g-recaptcha-response"></div>
+                    name="g-recaptcha-response"> </div>
                 <br>
             </div>
             <button id="btn_reset_pw">Reset password</button>
@@ -93,22 +92,23 @@ include 'reset_pw.php'
 
     </div>
 
-    <div class="reset_pw_2">
-        <div class="top-reset_pw_2">
+    <div class="reset_pw_2" id="resetPw2Div">
+        <div class=" top-reset_pw_2">
             <h3>Log in to your <strong style="color: rgba(7, 68, 242, 1);">Ms.Robot</strong> account!</h3>
             <a id="btn_z_2" class='bx bx-x'></a>
         </div>
-        <div class="item-reset_pw_2">
+
+        <form class="item-reset_pw_2" method="post" action="">
             <div class="box-reset_pw_2">
-                <input id="box_" type="password" placeholder="Password">
+                <input class="box_" type="password" placeholder="Password" name="pwd_reset">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-reset_pw_2">
-                <input id="box_" type="password" placeholder="Password">
+                <input class="box_" type="password" placeholder="Password" name="pwd_new">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <button id="btn_reset_pw_2">Sumbit</button>
-        </div>
+        </form>
     </div>
 
     <div class="ask_qsBox">
@@ -125,6 +125,10 @@ include 'reset_pw.php'
     </div>
 
 </div>
+
+<script>
+
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

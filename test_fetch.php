@@ -4,7 +4,9 @@ include "db_connection.php"; //kết nối DataBase
 if (isset($_POST['min']) && isset($_POST['max'])) {
     $min = $_POST['min'];// lấy giá trị min
     $max = $_POST['max'];// lấy giá trị max
-    $search = $_POST['searchData'];// lấy giá trị tìm kiếm
+    // $search = $_POST['searchData'];// lấy giá trị tìm kiếm
+    
+    $search = isset($_POST['searchData']) ? $_POST['searchData'] : '';// Lấy giá trị tìm kiếm và kiểm tra 
     
     // xử lý tìm kiếm kèm theo giá min -> max
     $sql = "SELECT * FROM product WHERE name_Product LIKE '%$search%' AND price_Product BETWEEN '$min' AND '$max'";

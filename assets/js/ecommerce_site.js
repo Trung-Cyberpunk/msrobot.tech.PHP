@@ -126,6 +126,35 @@ if(description){
 }
 
 
+// Rating
+
+
+
+const rating = document.querySelectorAll('.rating-star');
+const selectedRating = document.getElementById('selected-rating');
+const userRatingValue = document.getElementById('user-rating-value');
+rating.forEach((star, i) => {
+  star.onclick = function() {
+    let current = i + 1;
+
+    rating.forEach((item, j) => {
+      if (current >= j + 1) {
+        item.classList.remove('bx-star');
+        item.classList.add('bxs-star');
+      } else {
+        item.classList.remove('bxs-star');
+        item.classList.add('bx-star');
+      }
+    });
+    userRatingValue.value = current;
+  };
+});
+
+
+
+
+
+
 
 
 

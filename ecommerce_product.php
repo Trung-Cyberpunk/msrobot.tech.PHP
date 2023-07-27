@@ -149,7 +149,7 @@ include "db_connection.php";
                             <span class="bx bx-star"></span>
                             <span class="vote">6376</span>
                         </div>
-                        <p>
+                        <p style="margin-top: 1.5rem;">
                             <?php echo $p_info; ?>
                         </p>
                         <div class="container_quatity">
@@ -190,6 +190,7 @@ include "db_connection.php";
                     </div>
 
                     <form class="reviewss" style="display: none;" method="post">
+                        <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
                         <p>
                             There are no reviews yet.
                             <br>
@@ -199,25 +200,63 @@ include "db_connection.php";
                         </p>
                         <div class="rating_2">
                             <span>Your Rating</span>
-                            <span class="bx bx-star"></span>
-                            <span class="bx bx-star"></span>
-                            <span class="bx bx-star"></span>
-                            <span class="bx bx-star"></span>
-                            <span class="bx bx-star"></span>
-                        </div>
-                        <textarea name="" id="note_rv" placeholder="Your Review*"></textarea>
-                        <div class="rv_mail">
-                            <input type="text" id="name_rv" placeholder="Name *">
-                            <input type="email" id="mail_rv" placeholder="Email *">
-                            <button class="btn_rv">Submit</button>
-                        </div>
 
+                            <span class="rating-star bx bx-star"></span>
+                            <span class="rating-star bx bx-star"></span>
+                            <span class="rating-star bx bx-star"></span>
+                            <span class="rating-star bx bx-star"></span>
+                            <span class="rating-star bx bx-star"></span>
+                            <input type="hidden" id="user-rating-value" name="user_rating" value="0">
+                        </div>
+                        <textarea id="note_rv" placeholder="Your Review*" name="user_review"></textarea>
+                        <div class="rv_mail">
+                            <input type="text" id="name_rv" placeholder="Name *" name="name_rv">
+                            <input type="email" id="mail_rv" placeholder="Email *" name="mail_rv">
+                            <button class="btn_rv" type="submit">Submit</button>
+                        </div>
+                        <!-- Review -->
                         <div class="reivew_box">
                             <div class="user_review">
-                                <img src="" alt="">
-                                <h4 id="name_user">Critical Skeptic</h4>
-                                <span>Excellent phone, beautiful aesthetics, and a taste of the future worth paying for:
-                                    9/10.</span>
+                                <div class="review_content">
+                                    <div class="name_rv">
+                                        <img src="/msrobot.tech.PHP/assets/img/blog_img/ava.png" alt="">
+                                        <h4 id="name_user">Critical Skeptic</h4>
+                                    </div>
+                                    <div class="rating review_star">
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                    </div>
+                                </div>
+                                <span class="title_rv">
+                                    Excellent phone, beautiful aesthetics, and a taste of the future worth paying for:
+                                    9/10.
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="reivew_box">
+                            <div class="user_review">
+                                <div class="review_content">
+                                    <div class="name_rv">
+                                        <img src="/msrobot.tech.PHP/assets/img/blog_img/ava.png" alt="">
+                                        <h4 id="name_user">Fleon</h4>
+                                    </div>
+                                    <div class="rating review_star">
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                    </div>
+                                </div>
+                                <span class="title_rv">
+                                    It means it's the G950F variant which has a Exynos Chipset instead of snapdragon.
+                                    Same power but this version allows for rooting because it has an unlocked
+                                    bootloader.
+                                </span>
                             </div>
 
                         </div>

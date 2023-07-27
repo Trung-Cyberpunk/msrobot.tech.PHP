@@ -92,20 +92,58 @@ const btn_reset = document.querySelector("#btn_reset_pw");
 const reset_pw_2 = document.querySelector(".reset_pw_2");
 const btn_z_2 = document.querySelector("#btn_z_2");
 
-btn_reset.onclick = () =>{
+// btn_reset.onclick =  () =>{
 
-    reset_pw_2.classList.add("active");
-    reset_pw.classList.remove("active");
-    backgr.classList.add("opacity");
-}
+//     reset_pw_2.classList.add("active");
+//     reset_pw.classList.remove("active");
+//     backgr.classList.add("opacity");
+// }
+$(document).ready(function() {
+    // Bắt sự kiện khi người dùng bấm nút Reset Password
+    $('#btn_reset_pw').click(function(e) {
+        e.preventDefault();
 
+        // Lấy thông tin từ form
+        var email = $('#emailInput').val();
+        var captcha_response = grecaptcha.getResponse(); // Lấy giá trị captcha
+
+        // Gửi thông tin qua Ajax
+        $.ajax({
+            url: 'reset_pw.php',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                'email': email,
+                'g-recaptcha-response': captcha_response
+            },
+            success: function(response) {
+                // Kiểm tra kết quả từ server
+                if (response.email_exists) {
+                    // Hiển thị box 2 nếu email tồn tại và captcha hợp lệ
+                    reset_pw_2.addClass("active");
+                    reset_pw.removeClass("active");
+                    backgr.addClass("opacity");
+                    alert('oik');
+                } else {
+                    // Xử lý thông báo lỗi (ví dụ, hiển thị thông báo lỗi)
+                }
+            },
+            error: function() {
+                // Xử lý thông báo lỗi nếu có lỗi xảy ra
+            }
+        });
+    });
+});
 btn_z_2.onclick = (event) => {
     event.preventDefault();
     reset_pw_2.classList.remove("active");  
     backgr.classList.remove("opacity");
 }
+// sử dụng ajax để thực hiện hiện bảng reset passwrd
 
-// sign page item
+
+
+// sign page item8i
 
 if(ask_login){
     ask_login.onclick = () =>{

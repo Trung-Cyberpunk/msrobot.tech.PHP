@@ -334,7 +334,6 @@
     width: 100%;
     height: 1rem;
     align-items: center;
-    margin-bottom: 1.5rem;
 }
 .rating span{
     color: #0744F2;
@@ -552,7 +551,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 60rem;
-
+    margin-bottom: 3rem;
 }
 .rv_mail input {
     width: 25rem;
@@ -648,4 +647,52 @@
     font-family: 'Montserrat';
     margin-bottom: 1rem;
     color: rgba(75, 145, 249, 1);
+}
+
+
+
+/*  Review */
+
+.reivew_box{
+    width: 100%;
+    position: relative;
+    height: auto;
+    border: rgba(152, 156, 162, 1) solid 0.5px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+.user_review{
+    width: 100%;
+    height: auto;
+}
+
+.review_content{
+    width: 100%;
+}
+.name_rv{
+    display: flex;
+    width: 30%;
+    margin-bottom: 1rem;
+
+}
+.name_rv img{   
+    width: 30px;
+    margin-right: 20px;
+}
+.name_rv #name_user{
+    color: rgba(75, 145, 249, 1);
+    font-weight: 500;
+    font-size: 1.4rem;
+
+}
+
+.review_star{
+    position: absolute;
+    top: 2rem;
+    right: -76rem;
+}
+.title_rv{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(189, 189, 189, 1);
 }
