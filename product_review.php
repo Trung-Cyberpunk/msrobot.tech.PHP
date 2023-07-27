@@ -15,11 +15,11 @@ if(isset($_POST['name_rv']) && isset($_POST['product_id']) && !empty($_POST['nam
 
 
     
-// if (mysqli_query($conn, $sql)) {
-//     echo "Lưu thành công";
-// } else {
-//     echo "Lỗi khi lưu đánh giá: " . mysqli_error($conn);
-// }
+if (mysqli_query($conn, $sql)) {
+    echo "Lưu thành công";
+} else {
+    echo "Lỗi khi lưu đánh giá: " . mysqli_error($conn);
+}
 }
 
 $conn->close();

@@ -167,11 +167,30 @@ include "db_connection.php";
                         </div>
                     </div>
                 </div>
+                <!-- Review -->
+                <?php
+                            // Kiểm tra xem tham số truy vấn "id" có tồn tại hay không
+                            if (isset($_GET['id'])) {
+                                // Lấy giá trị "id" từ tham số truy vấn
+                                $product_id = $_GET['id'];
+
+                                // Kết nối đến cơ sở dữ liệu
+                                include "db_connection.php";
+
+                                // Chuẩn bị câu truy vấn sử dụng tham số truyền vào
+                                $sql_5 = "SELECT * FROM review_table WHERE product_id = $product_id";
+                                $result_5 = mysqli_query($conn, $sql_5);
+                                $count_5 = mysqli_num_rows($result_5);
+
+                                if($count_5 == 0){
+                                    echo 'Erorr';
+                                }else{
+                                    ?>
 
                 <div class="box_describe">
                     <div class="item_describe">
                         <span id="description">Description</span>
-                        <span id="reviews" class="color_describe">Reviews(0)</span>
+                        <span id="reviews" class="color_describe">Reviews(<?php echo $count_5 + 1?>)</span>
                     </div>
                     <div id="hr">
                         <div class="triangle"></div>
@@ -215,29 +234,69 @@ include "db_connection.php";
                             <button class="btn_rv">Submit</button>
                         </div>
 
-                        <!-- Review -->
+
+                        <?php
+                                    while ($row = mysqli_fetch_assoc($result_5)){
+                                        $p_id = $row['product_id'];
+                                        $userName = $row['user_name'];
+                                        $userEmail = $row['email'];
+                                        $userRating = $row['user_rating'];
+                                        $userReview = $row['user_review'];
+
+                                        ?>
                         <div class="reivew_box">
                             <div class="user_review">
                                 <div class="review_content">
                                     <div class="name_rv">
                                         <img src="/msrobot.tech.PHP/assets/img/blog_img/ava.png" alt="">
-                                        <h4 id="name_user">Critical Skeptic</h4>
+                                        <h4 id="name_user"><?php echo $userName?></h4>
                                     </div>
+
+                                    <!-- <div class="rating review_star">
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                        <span class="bx bx-star"></span>
+                                    </div> -->
+
                                     <div class="rating review_star">
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
+                                        <?php
+                                        // Giả sử $rating chứa số sao được lấy từ cơ sở dữ liệu (ví dụ: $rating = 4;)
+                                        $max_stars = 5; // Số sao tối đa mà bạn muốn hiển thị
+                                        for ($i = 1; $i <= $max_stars; $i++) {
+                                            // Nếu số sao hiện tại ($i) nhỏ hơn hoặc bằng số sao được đánh giá ($rating),
+                                            // thì thêm lớp "bx-star" vào để hiển thị sao đầy, ngược lại để hiển thị sao rỗng.
+                                            $star_class = $i <= $userRating ? 'bxs-star' : 'bx-star';
+                                        ?>
+                                        <span class="bx <?php echo $star_class; ?>"></span>
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
+
                                 </div>
                                 <span class="title_rv">
-                                    Excellent phone, beautiful aesthetics, and a taste of the future worth paying for:
-                                    9/10.
+                                    <?php echo $userReview?>
                                 </span>
+
                             </div>
 
                         </div>
+
+                        <?php
+                                }
+                            }
+
+                            }
+                            mysqli_close($conn);
+                            ?>
+
+
+
+
+
+
                         <div class="reivew_box">
                             <div class="user_review">
                                 <div class="review_content">
