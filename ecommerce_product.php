@@ -181,16 +181,13 @@ include "db_connection.php";
                                 $sql_5 = "SELECT * FROM review_table WHERE product_id = $product_id";
                                 $result_5 = mysqli_query($conn, $sql_5);
                                 $count_5 = mysqli_num_rows($result_5);
+                                ?>
 
-                                if($count_5 == 0){
-                                    echo 'Erorr';
-                                }else{
-                                    ?>
 
                 <div class="box_describe">
                     <div class="item_describe">
                         <span id="description">Description</span>
-                        <span id="reviews" class="color_describe">Reviews(<?php echo $count_5 + 1?>)</span>
+                        <span id="reviews" class="color_describe">Reviews(<?php echo $count_5?>)</span>
                     </div>
                     <div id="hr">
                         <div class="triangle"></div>
@@ -233,6 +230,13 @@ include "db_connection.php";
                             <input type="email" id="mail_rv" placeholder="Email *" name="mail_rv" required>
                             <button class="btn_rv">Submit</button>
                         </div>
+                        <?php
+                                if($count_5 == 0){
+                                    
+                                }else{
+                                    ?>
+
+
 
 
                         <?php
@@ -297,29 +301,7 @@ include "db_connection.php";
 
 
 
-                        <div class="reivew_box">
-                            <div class="user_review">
-                                <div class="review_content">
-                                    <div class="name_rv">
-                                        <img src="/msrobot.tech.PHP/assets/img/blog_img/ava.png" alt="">
-                                        <h4 id="name_user">Fleon</h4>
-                                    </div>
-                                    <div class="rating review_star">
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                        <span class="bx bx-star"></span>
-                                    </div>
-                                </div>
-                                <span class="title_rv">
-                                    It means it's the G950F variant which has a Exynos Chipset instead of snapdragon.
-                                    Same power but this version allows for rooting because it has an unlocked
-                                    bootloader.
-                                </span>
-                            </div>
 
-                        </div>
 
                     </form>
 
