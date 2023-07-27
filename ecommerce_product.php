@@ -206,14 +206,15 @@ include "db_connection.php";
                             <span class="rating-star bx bx-star"></span>
                             <span class="rating-star bx bx-star"></span>
                             <span class="rating-star bx bx-star"></span>
-                            <input type="hidden" id="user-rating-value" name="user_rating" value="0">
+                            <input type="hidden" id="user-rating-value" name="user_rating" value="0" required>
                         </div>
                         <textarea id="note_rv" placeholder="Your Review*" name="user_review"></textarea>
                         <div class="rv_mail">
-                            <input type="text" id="name_rv" placeholder="Name *" name="name_rv">
-                            <input type="email" id="mail_rv" placeholder="Email *" name="mail_rv">
-                            <button class="btn_rv" type="submit">Submit</button>
+                            <input type="text" id="name_rv" placeholder="Name *" name="name_rv" required>
+                            <input type="email" id="mail_rv" placeholder="Email *" name="mail_rv" required>
+                            <button class="btn_rv">Submit</button>
                         </div>
+
                         <!-- Review -->
                         <div class="reivew_box">
                             <div class="user_review">

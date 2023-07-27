@@ -125,7 +125,7 @@ if(description){
   });
 }
 
-
+alert("Đánh giá sản phẩm thành công!");
 // Rating
 
 
