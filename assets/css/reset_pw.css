@@ -134,7 +134,7 @@ body{
     display: block;
 }
 
-.reset_pw_2{
+.reset_pw_2{    
     position: relative;
     margin-top:5rem;
     width: 35rem;
@@ -178,7 +178,7 @@ body{
     position: relative;
 }
 
-.item-reset_pw_2 .box-reset_pw_2 #box_{
+.item-reset_pw_2 .box-reset_pw_2 .box_{
     width: 100%;
     height: 3.5rem;
     font-size: 1.4rem;

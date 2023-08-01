@@ -94,10 +94,12 @@ const btn_z_2 = document.querySelector("#btn_z_2");
 
 // btn_reset.onclick =  () =>{
 
-//     reset_pw_2.classList.add("active");
-//     reset_pw.classList.remove("active");
-//     backgr.classList.add("opacity");
+    // reset_pw_2.classList.add("active");
+    // reset_pw.classList.remove("active");
+    // backgr.classList.add("opacity");
 // }
+
+
 $(document).ready(function() {
     // Bắt sự kiện khi người dùng bấm nút Reset Password
     $('#btn_reset_pw').click(function(e) {
@@ -120,16 +122,16 @@ $(document).ready(function() {
                 // Kiểm tra kết quả từ server
                 if (response.email_exists) {
                     // Hiển thị box 2 nếu email tồn tại và captcha hợp lệ
-                    reset_pw_2.addClass("active");
-                    reset_pw.removeClass("active");
-                    backgr.addClass("opacity");
-                    alert('oik');
+                    reset_pw_2.classList.add("active");
+                    reset_pw.classList.remove("active");
+                    backgr.classList.add("opacity");
+                    
                 } else {
-                    // Xử lý thông báo lỗi (ví dụ, hiển thị thông báo lỗi)
+                    alert("Email không đúng");
                 }
             },
             error: function() {
-                // Xử lý thông báo lỗi nếu có lỗi xảy ra
+                alert("ERRO!");
             }
         });
     });

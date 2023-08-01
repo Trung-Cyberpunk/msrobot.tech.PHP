@@ -266,14 +266,15 @@ include "db_connection.php";
 
                                     <div class="rating review_star">
                                         <?php
-                                        // Giả sử $rating chứa số sao được lấy từ cơ sở dữ liệu (ví dụ: $rating = 4;)
-                                        $max_stars = 5; // Số sao tối đa mà bạn muốn hiển thị
+                                        $max_stars = 5; // Số sao tối đa mà muốn hiển thị
                                         for ($i = 1; $i <= $max_stars; $i++) {
                                             // Nếu số sao hiện tại ($i) nhỏ hơn hoặc bằng số sao được đánh giá ($rating),
                                             // thì thêm lớp "bx-star" vào để hiển thị sao đầy, ngược lại để hiển thị sao rỗng.
                                             $star_class = $i <= $userRating ? 'bxs-star' : 'bx-star';
                                         ?>
+
                                         <span class="bx <?php echo $star_class; ?>"></span>
+
                                         <?php
                                         }
                                         ?>

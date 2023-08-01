@@ -29,7 +29,7 @@
 
                         <li id="demo_sites">
 
-                        <?php
+                            <?php
                         if(isset($_COOKIE['user'])){
                             echo '<a id="header_down" href="#" style="width: 6rem">Demo Sites</a>
                             <ul class="header_insite">

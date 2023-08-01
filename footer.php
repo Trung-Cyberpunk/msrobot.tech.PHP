@@ -74,7 +74,7 @@
             <a id="btn_z" class='bx bx-x'></a>
         </div>
 
-        <form class="item-reset_pw" id="resetPwForm" method="post">
+        <form class="item-reset_pw" id="resetPwForm" method="post" action="">
             <div class="box-reset_pw">
                 <input id="emailInput" class="box_" type="email" placeholder="Email" name="email" required>
                 <i id="icon" class='bx bx-envelope'></i>
@@ -98,13 +98,13 @@
             <a id="btn_z_2" class='bx bx-x'></a>
         </div>
 
-        <form class="item-reset_pw_2" method="post" action="">
+        <form class="item-reset_pw_2" method="post">
             <div class="box-reset_pw_2">
-                <input class="box_" type="password" placeholder="Password" name="pwd_reset">
+                <input class="box_" type="password" placeholder="New Password" name="new_pw">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <div class="box-reset_pw_2">
-                <input class="box_" type="password" placeholder="Password" name="pwd_new">
+                <input class="box_" type="password" placeholder="Verify Password" name="verify_pw">
                 <i id="icon" class='bx bx-lock'></i>
             </div>
             <button id="btn_reset_pw_2">Sumbit</button>
