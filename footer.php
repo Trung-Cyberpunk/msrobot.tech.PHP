@@ -65,8 +65,6 @@
 
 
 
-
-
     <div class="reset_pw" id="resetPwDiv">
 
         <div class="top-reset_pw">

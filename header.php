@@ -2,6 +2,7 @@
     <?php
     include 'login_registration.php';
     include 'product_review.php';
+    include 'reset_pw.php';
     ?>
 
 

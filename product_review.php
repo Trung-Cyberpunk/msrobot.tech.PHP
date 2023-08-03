@@ -14,9 +14,13 @@ if(isset($_POST['name_rv']) && isset($_POST['product_id']) && !empty($_POST['nam
         VALUES ('$productId','$userName', '$userEmail', '$userRating', '$userReview', '$datetime')";
 
 
-    
+        
 if (mysqli_query($conn, $sql)) {
-    // echo "Lưu thành công";
+
+    // echo '    
+    // alert("Đánh giá sản phẩm thành công!");
+    // ';
+    
 } else {
     echo "Lỗi khi lưu đánh giá: " . mysqli_error($conn);
 }

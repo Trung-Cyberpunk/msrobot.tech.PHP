@@ -125,7 +125,6 @@ $(document).ready(function() {
                     reset_pw_2.classList.add("active");
                     reset_pw.classList.remove("active");
                     backgr.classList.add("opacity");
-                    
                 } else {
                     alert("Email không đúng");
                 }
@@ -136,6 +135,7 @@ $(document).ready(function() {
         });
     });
 });
+
 btn_z_2.onclick = (event) => {
     event.preventDefault();
     reset_pw_2.classList.remove("active");  

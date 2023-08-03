@@ -12,34 +12,28 @@ if (isset($_POST['email'])) {
 
     $response = array('email_exists' => ($count_rs > 0));
 
-    echo json_encode($response);
-
+  
 
     if(isset($_POST['new_pw']) && isset($_POST['verify_pw'])){
 
         $new_pw = $_POST['new_pw'];
         $verify_pw = $_POST['verify_pw'];
 
-
+       
         if($new_pw != $verify_pw){
-            echo '<script>
-            window.location.href = "home.php";
-            </script>;
+            echo '
+            <script>
+               window.location.href = "home.php";
+               </script>;
             alert("Mat Khau Khong Trung Khop!");
             ';
         }else{
-           // Update the password in the database (without hashing)
-           $sql_update = " UPDATE user SET password = '$new_pw' WHERE email = '$email'";
+            
+           $sql_update = "UPDATE user SET password = '$new_pw' WHERE email = '$email'";
            $result_update = mysqli_query($conn, $sql_update);
 
-           echo $new_pw;
-           echo $verify_pw;
-
-
            if ($result_update) {
-               echo '<script>
-               window.location.href = "home.php";
-               </script>;
+               echo '
                alert("Mat Khau Da Cap Nhat!");
                ';
            } else {
@@ -53,6 +47,6 @@ if (isset($_POST['email'])) {
 
     }
 
-
+    echo json_encode($response);
 }
 ?>
