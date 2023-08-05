@@ -26,6 +26,4 @@ if (mysqli_query($conn, $sql)) {
 }
 }
 
-$conn->close();
-
 ?>

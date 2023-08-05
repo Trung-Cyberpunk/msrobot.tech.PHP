@@ -111,7 +111,7 @@ $(document).ready(function() {
 
         // Gửi thông tin qua Ajax
         $.ajax({
-            url: 'reset_pw.php',
+            url: 'checkemail.php',
             type: 'post',
             dataType: 'json',
             data: {
@@ -121,10 +121,35 @@ $(document).ready(function() {
             success: function(response) {
                 // Kiểm tra kết quả từ server
                 if (response.email_exists) {
+
+                    var email_2 = response.email;
                     // Hiển thị box 2 nếu email tồn tại và captcha hợp lệ
                     reset_pw_2.classList.add("active");
                     reset_pw.classList.remove("active");
                     backgr.classList.add("opacity");
+
+                    alert(email_2);
+                    $.ajax({
+                        url: 'reset_pw.php',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            'email_2': email_2,
+                            'new_pw': new_pw,
+                            'verify_pw': verify_pw
+                        },
+                        success: function(response) {
+                            if (response.error) {
+                                alert(response.message); // Hiển thị thông báo lỗi từ server
+                            } else {
+                                alert(response.message); // Hiển thị thông báo thành công từ server
+                                window.location.href = "home.php"; // Chuyển hướng trang nếu cần
+                            }
+                        },
+                        error: function() {
+                            alert("Lỗi khi gửi yêu cầu tới server!");
+                        }
+                    });
                 } else {
                     alert("Email không đúng");
                 }

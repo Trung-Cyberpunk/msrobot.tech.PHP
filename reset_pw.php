@@ -1,52 +1,29 @@
 <?php
 include "db_connection.php";
 
-if (isset($_POST['email'])) {
-    $email = $_POST['email']; //lấy dữ liệu email và captcha có tồn tại
-    $captchaResponse = $_POST['g-recaptcha-response'];
 
-    $sql = "SELECT * FROM user WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
-    $count_rs = mysqli_num_rows($result);
+if(isset($_POST['new_pw']) && isset($_POST['verify_pw']) && isset($_POST['email_2'])){
 
+    $email = $_POST['email_2'];
+    $new_pw = $_POST['new_pw'];
+    $verify_pw = $_POST['verify_pw'];
 
-    $response = array('email_exists' => ($count_rs > 0));
+   
+    if($new_pw != $verify_pw){
+        echo json_encode(array('error' => true, 'message' => 'Mật khẩu không khớp'));
+    }else{  
+        
+       $sql_update = "UPDATE user SET password = '$new_pw' WHERE email = '$email'";
+       $result_update = mysqli_query($conn, $sql_update);
 
-  
-
-    if(isset($_POST['new_pw']) && isset($_POST['verify_pw'])){
-
-        $new_pw = $_POST['new_pw'];
-        $verify_pw = $_POST['verify_pw'];
-
-       
-        if($new_pw != $verify_pw){
-            echo '
-            <script>
-               window.location.href = "home.php";
-               </script>;
-            alert("Mat Khau Khong Trung Khop!");
-            ';
-        }else{
-            
-           $sql_update = "UPDATE user SET password = '$new_pw' WHERE email = '$email'";
-           $result_update = mysqli_query($conn, $sql_update);
-
-           if ($result_update) {
-               echo '
-               alert("Mat Khau Da Cap Nhat!");
-               ';
-           } else {
-               echo '<script>
-               window.location.href = "home.php";
-               </script>;
-               alert("Co loi xay ra, vui long thu lai sau!");
-               ';
-           }
-        }
-
+       if ($result_update) {
+            echo json_encode(array('error' => true, 'message' => 'Cập nhật mật khẩu thành công'));
+       } else {
+            echo json_encode(array('error' => true, 'message' => 'Cập nhật mật khẩu không thành công'));
+       }
     }
 
-    echo json_encode($response);
 }
+
+
 ?>
